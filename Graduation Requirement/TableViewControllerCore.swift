@@ -12,6 +12,7 @@ var coreChosen:[String] = []
 
 class TableViewControllerCore: UITableViewController {
     
+    
     let cores = ["EECS 132", "EECS 233", "EECS 281", "EECS 302", "EECS 340", "EECS 395"]
     
     // MARK: - Table view data source
