@@ -19,6 +19,7 @@ class ViewControllerInfo: UIViewController {
     var coreRemaining:[String] = ["EECS 132", "EECS 233", "EECS 281", "EECS 302", "EECS 340", "EECS 395"]
     
     
+    @IBOutlet weak var label2: UILabel!
     
     @IBOutlet weak var label: UILabel!
 
@@ -30,14 +31,20 @@ class ViewControllerInfo: UIViewController {
     }
     
     func getBreadthRemain() -> Int {
+        if (tech?.getHowMany()) == ">=5" {
+            return 0;
+        }
         return 3 - Int((breadth?.getHowMany())!)!
     }
     
     func getTechRemain() -> Int {
+        if (tech?.getHowMany()) == ">=5" {
+            return 0;
+        }
         return 4 - Int((tech?.getHowMany())!)!
     }
     
-    func getInfo() -> String {
+    func getInfo() -> [String] {
         var yearString = year?.getYear()
         var techString = tech?.getHowMany()
         var degreeString = degree?.getDegree()
@@ -45,15 +52,17 @@ class ViewControllerInfo: UIViewController {
         var breadthString = breadth?.getHowMany()
         var coreListString: String = ""
         for i in 0..<coreRemaining.count {
-            coreListString = coreListString + coreRemaining[i]
+            coreListString = coreListString + coreRemaining[i] + "\n"
         }
         var finalString: String
-        finalString = yearString! + degreeString!
+        var finalString2: String
+        finalString = yearString! + "\n" + degreeString! + "\n"
         finalString = finalString + "tech remain"
         finalString = finalString + String(getTechRemain()) + "\nbreadth remain"
-        finalString = finalString + String(getBreadthRemain()) + "\ncore Remain" + coreListString
+        finalString = finalString + String(getBreadthRemain())
+        finalString2 = "core Remain\n" + coreListString
         print (coreListString)
-        return finalString
+        return [finalString,finalString2]
     }
     
     override func viewDidLoad() {
@@ -66,7 +75,8 @@ class ViewControllerInfo: UIViewController {
         coreRemaining = getCoreRemain()
         print(core?.getCore())
         print ("remain")
-        label.text = self.getInfo()
+        label.text = self.getInfo()[0]
+        label2.text = self.getInfo()[1]
         // Do any additional setup after loading the view, typically from a nib.
     }
     
