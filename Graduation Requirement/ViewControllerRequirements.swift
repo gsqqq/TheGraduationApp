@@ -8,6 +8,8 @@
 
 import UIKit
 
+var breadthNum: String!
+
 class ViewControllerRequirements: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate  {
 
     
@@ -30,6 +32,11 @@ class ViewControllerRequirements: UIViewController, UIPickerViewDataSource, UIPi
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         breadthText.text = breadths[row]
+        breadthNum = breadths[row]
+    }
+    
+    func getHowMany() -> String {
+        return breadthNum
     }
     
     

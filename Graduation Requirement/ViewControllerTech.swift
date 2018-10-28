@@ -13,8 +13,7 @@ class ViewControllerTech: UIViewController, UIPickerViewDataSource, UIPickerView
     
     @IBOutlet weak var techText: UITextField!
     @IBOutlet weak var techPicker: UIPickerView!
-    
-    var year:ViewControllerYear? = nil
+
     
     let techs = ["0", "1", "2", "3", "4", ">=5"]
     
@@ -33,19 +32,6 @@ class ViewControllerTech: UIViewController, UIPickerViewDataSource, UIPickerView
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         techText.text = techs[row]
         techNum = techs[row]
-        let isEqual = (year?.getYear() == "2020")
-        if isEqual{
-            print("2020")
-        } else {
-            print("2021")
-        }
-      //  let remain : Int = Int(techText.text!)
-      //  print(remain + 1)
-    }
-    
-    func remain() {
-        let remain = Int(techText.text!)
-        print(remain)
     }
     
     func getHowMany() -> String {
@@ -55,7 +41,6 @@ class ViewControllerTech: UIViewController, UIPickerViewDataSource, UIPickerView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        year = ViewControllerYear()
         // Do any additional setup after loading the view, typically from a nib.
     }
     

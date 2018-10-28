@@ -41,7 +41,6 @@ class ViewControllerYear: UIViewController, UIPickerViewDataSource, UIPickerView
     }
     
     func getYear() -> String {
-        //return nameTextField.text!
         return yearChosen
     }
     
