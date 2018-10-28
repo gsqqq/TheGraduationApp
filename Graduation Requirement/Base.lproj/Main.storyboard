@@ -140,7 +140,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="M8T-Sv-1u1" kind="show" id="rG2-J9-IbJ"/>
+                                            <segue destination="lOt-gQ-nqT" kind="show" id="CnE-BH-PWr"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -157,13 +157,40 @@
                     <connections>
                         <outlet property="degreePicker" destination="EXr-7f-R6A" id="Xbk-Zu-XtL"/>
                         <outlet property="degreeText" destination="4Oo-FN-MSn" id="NEJ-2S-jbz"/>
-                        <segue destination="M8T-Sv-1u1" kind="show" id="uhE-Dc-gFX"/>
+                        <segue destination="lOt-gQ-nqT" kind="show" id="1sp-X2-vYi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAw-0J-JJM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="kdt-jg-wSp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1295" y="985"/>
+        </scene>
+        <!--View Controller Info-->
+        <scene sceneID="tgt-xi-RyC">
+            <objects>
+                <viewController id="lOt-gQ-nqT" userLabel="View Controller Info" customClass="ViewControllerInfo" customModule="Graduation_Requirement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sgF-bm-blC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="clip" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQu-pd-JKJ">
+                                <rect key="frame" x="117" y="176" width="197" height="122"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="SDO-pS-nxc"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="aQu-pd-JKJ" id="Xc8-gz-LDd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="szJ-qm-dla" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2188" y="928.78560719640188"/>
         </scene>
         <!--View Controller Requirements-->
         <scene sceneID="mRO-jo-C50">
@@ -406,6 +433,15 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hdl-ch-qmF" id="SAK-co-vZx">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2L-N8-6RN">
+                                                    <rect key="frame" x="153" y="29" width="42" height="4"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="jM3-vw-f6u">
@@ -414,6 +450,15 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jM3-vw-f6u" id="OVP-Qb-xZs">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dP9-W0-KJm">
+                                                    <rect key="frame" x="156" y="11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="y5E-qt-yRC">
@@ -539,13 +584,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bDn-vI-6CY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1780" y="193.85307346326837"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uhE-Dc-gFX"/>
         <segue reference="9Be-CP-qzn"/>
         <segue reference="2pR-lX-7M9"/>
         <segue reference="gl8-rO-X37"/>
+        <segue reference="1sp-X2-vYi"/>
         <segue reference="DfV-Wu-q7g"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -8,6 +8,8 @@
 
 import UIKit
 
+var yearChosen: String!
+
 class ViewControllerYear: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     //MARK: Properties
@@ -19,6 +21,7 @@ class ViewControllerYear: UIViewController, UIPickerViewDataSource, UIPickerView
     
     
     let years = ["2020", "2021"]
+
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -34,6 +37,12 @@ class ViewControllerYear: UIViewController, UIPickerViewDataSource, UIPickerView
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         nameTextField.text = years[row]
+        yearChosen = years[row]
+    }
+    
+    func getYear() -> String {
+        //return nameTextField.text!
+        return yearChosen
     }
     
     
@@ -50,3 +59,7 @@ class ViewControllerYear: UIViewController, UIPickerViewDataSource, UIPickerView
 
 }
 
+/*struct name {
+    static var year = yearChosen
+}
+*/

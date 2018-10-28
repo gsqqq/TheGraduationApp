@@ -8,11 +8,17 @@
 
 import UIKit
 
+var coreChosen:[String] = []
+
 class TableViewControllerCore: UITableViewController {
     
     let cores = ["EECS 132", "EECS 233", "EECS 281", "EECS 302", "EECS 340", "EECS 395"]
     
     // MARK: - Table view data source
+    
+    func getCore() -> [String]{
+        return coreChosen
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cores.count
@@ -39,6 +45,8 @@ class TableViewControllerCore: UITableViewController {
         }
         else {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+            coreChosen.append(cores[indexPath.row])
+            
         }
     }
     

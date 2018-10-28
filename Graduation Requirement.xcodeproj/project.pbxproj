@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE2A189021851751007E449A /* ViewControllerSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A188F21851751007E449A /* ViewControllerSchedule.swift */; };
+		CE2A18922185573F007E449A /* ViewControllerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A18912185573F007E449A /* ViewControllerInfo.swift */; };
 		F08E7BF8215D9F8F00F2CD8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08E7BF7215D9F8F00F2CD8F /* AppDelegate.swift */; };
 		F08E7BFA215D9F8F00F2CD8F /* ViewControllerYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08E7BF9215D9F8F00F2CD8F /* ViewControllerYear.swift */; };
 		F08E7BFD215D9F8F00F2CD8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F08E7BFB215D9F8F00F2CD8F /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE2A188F21851751007E449A /* ViewControllerSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSchedule.swift; sourceTree = "<group>"; };
+		CE2A18912185573F007E449A /* ViewControllerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInfo.swift; sourceTree = "<group>"; };
 		F08E7BF4215D9F8F00F2CD8F /* Graduation Requirement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Graduation Requirement.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08E7BF7215D9F8F00F2CD8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F08E7BF9215D9F8F00F2CD8F /* ViewControllerYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerYear.swift; sourceTree = "<group>"; };
@@ -71,7 +75,9 @@
 				F0E5DE0621841A1000DD2451 /* ViewControllerDegree.swift */,
 				F08E7BFE215D9F8F00F2CD8F /* Assets.xcassets */,
 				F08E7C00215D9F8F00F2CD8F /* LaunchScreen.storyboard */,
+				CE2A18912185573F007E449A /* ViewControllerInfo.swift */,
 				F08E7C03215D9F8F00F2CD8F /* Info.plist */,
+				CE2A188F21851751007E449A /* ViewControllerSchedule.swift */,
 			);
 			path = "Graduation Requirement";
 			sourceTree = "<group>";
@@ -150,9 +156,11 @@
 			files = (
 				F0E5DE1721844DF100DD2451 /* ViewControllerTech.swift in Sources */,
 				F0E5DE09218421A000DD2451 /* ViewControllerRequirements.swift in Sources */,
+				CE2A189021851751007E449A /* ViewControllerSchedule.swift in Sources */,
 				F0E5DE0721841A1000DD2451 /* ViewControllerDegree.swift in Sources */,
 				F08E7BFA215D9F8F00F2CD8F /* ViewControllerYear.swift in Sources */,
 				F0E5DE1321843A0C00DD2451 /* TableViewControllerCore.swift in Sources */,
+				CE2A18922185573F007E449A /* ViewControllerInfo.swift in Sources */,
 				F08E7BF8215D9F8F00F2CD8F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

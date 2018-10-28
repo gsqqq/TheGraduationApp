@@ -8,6 +8,8 @@
 
 import UIKit
 
+var degreeChosen: String!
+
 class ViewControllerDegree: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate  {
 
     
@@ -31,6 +33,11 @@ class ViewControllerDegree: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         degreeText.text = degrees[row]
+        degreeChosen = degrees[row]
+    }
+    
+    func getDegree() -> String {
+        return degreeChosen
     }
     
     override func viewDidLoad() {
