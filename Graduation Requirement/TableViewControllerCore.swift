@@ -42,6 +42,8 @@ class TableViewControllerCore: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+            var indexToRemove = coreChosen.firstIndex(of:cores[indexPath.row])
+            coreChosen.remove(at: indexToRemove!)
         }
         else {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
