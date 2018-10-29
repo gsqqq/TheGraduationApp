@@ -34,14 +34,20 @@ class ViewControllerInfo: UIViewController {
         if (tech?.getHowMany()) == ">=5" {
             return 0;
         }
-        return 3 - Int((breadth?.getHowMany())!)!
+        if (degree?.getDegree() == "Bachelor of Arts") {
+            return 3 - Int((breadth?.getHowMany())!)!
+        }
+        return 5 - Int((breadth?.getHowMany())!)!
     }
     
     func getTechRemain() -> Int {
         if (tech?.getHowMany()) == ">=5" {
             return 0;
         }
-        return 4 - Int((tech?.getHowMany())!)!
+        if (degree?.getDegree() == "Bachelor of Arts") {
+            return 4 - Int((tech?.getHowMany())!)!
+        }
+        return 5 - Int((tech?.getHowMany())!)!
     }
     
     func getInfo() -> [String] {
