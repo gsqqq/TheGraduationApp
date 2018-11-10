@@ -14,6 +14,12 @@
 		1892375821865DF0000E2AD0 /* ViewControllerDegreeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892375721865DF0000E2AD0 /* ViewControllerDegreeTest.swift */; };
 		1892375A2186602C000E2AD0 /* ViewControllerInfoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189237592186602C000E2AD0 /* ViewControllerInfoTest.swift */; };
 		CE2A18922185573F007E449A /* ViewControllerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A18912185573F007E449A /* ViewControllerInfo.swift */; };
+		F071CE112196B6E400ED4700 /* ViewControllerA&S.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071CE102196B6E400ED4700 /* ViewControllerA&S.swift */; };
+		F071CE132196BEDE00ED4700 /* TableViewControllerA_S.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071CE122196BEDE00ED4700 /* TableViewControllerA_S.swift */; };
+		F0878A872196D0F8003CFF73 /* TableViewControllerENGR.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0878A862196D0F8003CFF73 /* TableViewControllerENGR.swift */; };
+		F0878A892196D14E003CFF73 /* ViewControllerENGR.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0878A882196D14E003CFF73 /* ViewControllerENGR.swift */; };
+		F0878A8B2196D6B6003CFF73 /* ViewControllerStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0878A8A2196D6B6003CFF73 /* ViewControllerStat.swift */; };
+		F0878A8D2196E138003CFF73 /* ViewControllerDepth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0878A8C2196E138003CFF73 /* ViewControllerDepth.swift */; };
 		F08E7BF8215D9F8F00F2CD8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08E7BF7215D9F8F00F2CD8F /* AppDelegate.swift */; };
 		F08E7BFA215D9F8F00F2CD8F /* ViewControllerYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08E7BF9215D9F8F00F2CD8F /* ViewControllerYear.swift */; };
 		F08E7BFD215D9F8F00F2CD8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F08E7BFB215D9F8F00F2CD8F /* Main.storyboard */; };
@@ -61,6 +67,12 @@
 		1892375721865DF0000E2AD0 /* ViewControllerDegreeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDegreeTest.swift; sourceTree = "<group>"; };
 		189237592186602C000E2AD0 /* ViewControllerInfoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInfoTest.swift; sourceTree = "<group>"; };
 		CE2A18912185573F007E449A /* ViewControllerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInfo.swift; sourceTree = "<group>"; };
+		F071CE102196B6E400ED4700 /* ViewControllerA&S.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ViewControllerA&S.swift"; path = "Graduation Requirement/ViewControllerA&S.swift"; sourceTree = "<group>"; };
+		F071CE122196BEDE00ED4700 /* TableViewControllerA_S.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewControllerA_S.swift; path = "Graduation Requirement/TableViewControllerA_S.swift"; sourceTree = "<group>"; };
+		F0878A862196D0F8003CFF73 /* TableViewControllerENGR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewControllerENGR.swift; path = "Graduation Requirement/TableViewControllerENGR.swift"; sourceTree = "<group>"; };
+		F0878A882196D14E003CFF73 /* ViewControllerENGR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerENGR.swift; path = "Graduation Requirement/ViewControllerENGR.swift"; sourceTree = "<group>"; };
+		F0878A8A2196D6B6003CFF73 /* ViewControllerStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerStat.swift; path = "Graduation Requirement/ViewControllerStat.swift"; sourceTree = "<group>"; };
+		F0878A8C2196E138003CFF73 /* ViewControllerDepth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerDepth.swift; path = "Graduation Requirement/ViewControllerDepth.swift"; sourceTree = "<group>"; };
 		F08E7BF4215D9F8F00F2CD8F /* Graduation Requirement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Graduation Requirement.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08E7BF7215D9F8F00F2CD8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F08E7BF9215D9F8F00F2CD8F /* ViewControllerYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerYear.swift; sourceTree = "<group>"; };
@@ -123,6 +135,12 @@
 		F08E7BEB215D9F8F00F2CD8F = {
 			isa = PBXGroup;
 			children = (
+				F0878A8C2196E138003CFF73 /* ViewControllerDepth.swift */,
+				F0878A8A2196D6B6003CFF73 /* ViewControllerStat.swift */,
+				F071CE122196BEDE00ED4700 /* TableViewControllerA_S.swift */,
+				F0878A862196D0F8003CFF73 /* TableViewControllerENGR.swift */,
+				F0878A882196D14E003CFF73 /* ViewControllerENGR.swift */,
+				F071CE102196B6E400ED4700 /* ViewControllerA&S.swift */,
 				1892374B21864445000E2AD0 /* UITest */,
 				F08E7BF6215D9F8F00F2CD8F /* Graduation Requirement */,
 				F08E7BF5215D9F8F00F2CD8F /* Products */,
@@ -352,9 +370,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0E5DE1721844DF100DD2451 /* ViewControllerTech.swift in Sources */,
+				F0878A8D2196E138003CFF73 /* ViewControllerDepth.swift in Sources */,
+				F0878A872196D0F8003CFF73 /* TableViewControllerENGR.swift in Sources */,
+				F0878A8B2196D6B6003CFF73 /* ViewControllerStat.swift in Sources */,
 				F0E5DE09218421A000DD2451 /* ViewControllerRequirements.swift in Sources */,
+				F071CE132196BEDE00ED4700 /* TableViewControllerA_S.swift in Sources */,
 				F0E5DE0721841A1000DD2451 /* ViewControllerDegree.swift in Sources */,
+				F071CE112196B6E400ED4700 /* ViewControllerA&S.swift in Sources */,
 				F08E7BFA215D9F8F00F2CD8F /* ViewControllerYear.swift in Sources */,
+				F0878A892196D14E003CFF73 /* ViewControllerENGR.swift in Sources */,
 				F0E5DE1321843A0C00DD2451 /* TableViewControllerCore.swift in Sources */,
 				CE2A18922185573F007E449A /* ViewControllerInfo.swift in Sources */,
 				F08E7BF8215D9F8F00F2CD8F /* AppDelegate.swift in Sources */,
