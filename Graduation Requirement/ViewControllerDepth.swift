@@ -16,7 +16,6 @@ class ViewControllerDepth: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBOutlet weak var depthText: UITextField!
     @IBOutlet weak var depthPicker: UIPickerView!
 
-    
     let area = ["Software Engineering", "Algorithms and Theory", "Computer Systems, Networks and Security", "Databases and Data Mining", "Bioinformatics", "Artificial Intelligence"]
     
     let depth = ["0", "1", "2", "3", ">=4"]

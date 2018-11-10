@@ -33,7 +33,5 @@ class ViewControllerStat: UIViewController, UIPickerViewDataSource, UIPickerView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
-
 }
