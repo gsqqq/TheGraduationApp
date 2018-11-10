@@ -36,5 +36,4 @@ class TableViewControllerENGR: UITableViewController {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
         }
     }
-
 }

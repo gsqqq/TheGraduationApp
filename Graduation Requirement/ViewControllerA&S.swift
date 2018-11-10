@@ -33,9 +33,5 @@ class ViewControllerA_S: UIViewController, UIPickerViewDataSource, UIPickerViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
-
 }
