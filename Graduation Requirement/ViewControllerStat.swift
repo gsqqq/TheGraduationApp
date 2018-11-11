@@ -8,6 +8,7 @@
 
 import UIKit
 
+var statStatus: String!
 class ViewControllerStat: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet weak var statText: UITextField!
@@ -29,6 +30,11 @@ class ViewControllerStat: UIViewController, UIPickerViewDataSource, UIPickerView
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         statText.text = stat[row]
+        statStatus = stat[row]
+    }
+    
+    func getStatCompleted() -> String {
+        return statStatus
     }
     
     override func viewDidLoad() {

@@ -8,6 +8,8 @@
 
 import UIKit
 
+var engrCoreChosen:[String] = []
+
 class TableViewControllerENGR: UITableViewController {
 
     let engr = ["MATH 121", "MATH 122 or MATH 124", "MATH 223 or MATH 227", "MATH 201 or MATH 307", "CHEM 111", "ENGR 145", "PHYS 121 or PHYS 123", "PHYS 122 or PHYS 124", "ENGR 398", "ENGL 398"]
@@ -15,6 +17,10 @@ class TableViewControllerENGR: UITableViewController {
     // MARK: - Table view data source
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    func getEngrCore() -> [String]{
+        return engrCoreChosen
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,9 +36,12 @@ class TableViewControllerENGR: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+            var indexToRemove = engrCoreChosen.firstIndex(of:engr[indexPath.row])
+            engrCoreChosen.remove(at: indexToRemove!)
         }
         else {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+            engrCoreChosen.append(engr[indexPath.row])
         }
     }
 }

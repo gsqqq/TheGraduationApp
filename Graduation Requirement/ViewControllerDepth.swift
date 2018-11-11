@@ -8,6 +8,8 @@
 
 import UIKit
 
+var depthNum: String!
+
 class ViewControllerDepth: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var areaText: UITextField!
@@ -49,7 +51,12 @@ class ViewControllerDepth: UIViewController, UIPickerViewDataSource, UIPickerVie
         }
         else if pickerView == depthPicker {
             depthText.text = depth[row]
+            depthNum = depth[row]
         }
+    }
+    
+    func getHowMany() -> String {
+        return depthNum
     }
     
     override func viewDidLoad() {
