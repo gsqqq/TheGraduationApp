@@ -140,7 +140,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Gxn-0U-uXt" kind="show" id="1hw-kN-dVe"/>
+                                            <action selector="go:" destination="HVd-x8-y8i" eventType="touchUpInside" id="v7l-kZ-OlF"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -157,8 +157,8 @@
                     <connections>
                         <outlet property="degreePicker" destination="EXr-7f-R6A" id="Xbk-Zu-XtL"/>
                         <outlet property="degreeText" destination="4Oo-FN-MSn" id="NEJ-2S-jbz"/>
-                        <segue destination="Gxn-0U-uXt" kind="show" id="LN8-vm-SAs"/>
-                        <segue destination="6fC-1F-2U5" kind="show" id="ie8-q4-fNC"/>
+                        <segue destination="Gxn-0U-uXt" kind="show" identifier="BSSegue" id="LN8-vm-SAs"/>
+                        <segue destination="6fC-1F-2U5" kind="show" identifier="BASegue" id="ie8-q4-fNC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAw-0J-JJM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1064,7 +1064,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="pa7-0N-nd8"/>
-        <segue reference="1hw-kN-dVe"/>
+        <segue reference="LN8-vm-SAs"/>
         <segue reference="ie8-q4-fNC"/>
         <segue reference="9NM-Qc-BdT"/>
         <segue reference="tFb-ng-qI9"/>

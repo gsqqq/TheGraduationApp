@@ -8,6 +8,7 @@
 
 import UIKit
 
+var phedNumAs: String!
 class ViewControllerA_S: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet weak var phedText: UITextField!
@@ -29,6 +30,11 @@ class ViewControllerA_S: UIViewController, UIPickerViewDataSource, UIPickerViewD
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         phedText.text = phed[row]
+        phedNumAs = phed[row]
+    }
+    
+    func getHowMany() -> String {
+        return phedNumAs
     }
     
     override func viewDidLoad() {

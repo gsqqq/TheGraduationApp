@@ -50,6 +50,16 @@ class ViewControllerDegree: UIViewController, UIPickerViewDataSource, UIPickerVi
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func go(_ sender: Any) {
+        if getDegree() == "Bachelor of Arts"{
+            self.performSegue(withIdentifier: "BASegue", sender: nil)
+        }
+        else {
+            self.performSegue(withIdentifier: "BSSegue", sender: nil)
+        }
+    }
+
 
     /*
     // MARK: - Navigation

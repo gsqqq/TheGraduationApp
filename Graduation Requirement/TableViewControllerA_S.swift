@@ -8,6 +8,8 @@
 
 import UIKit
 
+var asCoreChosen:[String] = []
+
 class TableViewControllerA_S: UITableViewController {
 
     let a_s = ["MATH 125", "MATH 126", "ENGL 398", "ENGR 398","Arts & Humanities I", "Arts & Humanities II", "Natural Sciences I", "Natural Sciences II", "Social Sciences I", "Social Sciences II", "Quantitative Reasoning", "Global & Cultural Diversity", "SAGES First Year Seminar", "Sages University Seminar I", "Sages University Seminar II"]
@@ -16,6 +18,10 @@ class TableViewControllerA_S: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    func getAsCore() -> [String]{
+        return asCoreChosen
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,9 +37,12 @@ class TableViewControllerA_S: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+            var indexToRemove = asCoreChosen.firstIndex(of:a_s[indexPath.row])
+            asCoreChosen.remove(at: indexToRemove!)
         }
         else {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+            asCoreChosen.append(a_s[indexPath.row])
         }
     }
 }

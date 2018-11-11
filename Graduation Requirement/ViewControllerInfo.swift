@@ -19,10 +19,14 @@ class ViewControllerInfo: UIViewController {
     var stat:ViewControllerStat? = nil
     var engrCore:TableViewControllerENGR? = nil
     var engrPhed:ViewControllerENGR? = nil
+    var asCore:TableViewControllerA_S? = nil
+    var asPhed:ViewControllerA_S? = nil
     
     var coreRemaining:[String] = ["EECS 132", "EECS 233", "EECS 281", "EECS 302", "EECS 340", "EECS 395"]
     
     var engrCoreRemaining:[String] = ["MATH 121", "MATH 122 or MATH 124", "MATH 223 or MATH 227", "MATH 201 or MATH 307", "CHEM 111", "ENGR 145", "PHYS 121 or PHYS 123", "PHYS 122 or PHYS 124", "ENGR 398", "ENGL 398"]
+    
+    var asCoreRemaining:[String] = ["MATH 125", "MATH 126", "ENGL 398", "ENGR 398","Arts & Humanities I", "Arts & Humanities II", "Natural Sciences I", "Natural Sciences II", "Social Sciences I", "Social Sciences II", "Quantitative Reasoning", "Global & Cultural Diversity", "SAGES First Year Seminar", "Sages University Seminar I", "Sages University Seminar II"]
     
     @IBOutlet weak var label2: UILabel!
     
@@ -40,6 +44,13 @@ class ViewControllerInfo: UIViewController {
             engrCoreRemaining.remove(at: engrCoreRemaining.firstIndex(of: engrCore!.getEngrCore()[i])!)
         }
         return engrCoreRemaining
+    }
+    
+    func getAsCoreRemain() -> [String] {
+        for i in 0..<asCore!.getAsCore().count {
+            asCoreRemaining.remove(at: asCoreRemaining.firstIndex(of: asCore!.getAsCore()[i])!)
+        }
+        return asCoreRemaining
     }
     
     func getBreadthRemain() -> Int {
@@ -63,10 +74,10 @@ class ViewControllerInfo: UIViewController {
     }
     
     func getDepthRemain() -> Int {
-        if (depth?.getHowMany()) == ">=5" {
+        if (depth?.getHowMany()) == ">=4" {
             return 0;
         }
-        return 5 - Int((depth?.getHowMany())!)!
+        return 4 - Int((depth?.getHowMany())!)!
     }
     
     func getStats() -> Int {
@@ -83,6 +94,13 @@ class ViewControllerInfo: UIViewController {
         return 2 - Double((engrPhed?.getHowMany())!)!
     }
     
+    func getAsPhed() -> Double {
+        if (asPhed?.getHowMany()) == ">=2" {
+            return 0;
+        }
+        return 2 - Double((asPhed?.getHowMany())!)!
+    }
+    
     func getInfo() -> [String] {
         var yearString = year?.getYear()
         var techString = tech?.getHowMany()
@@ -92,11 +110,15 @@ class ViewControllerInfo: UIViewController {
         var engrCoreList = engrCore?.getEngrCore()
         var coreListString: String = ""
         var engrCoreListString: String = ""
+        var asCoreListString: String = ""
         for i in 0..<coreRemaining.count {
             coreListString = coreListString + coreRemaining[i] + "\n"
         }
         for i in 0..<engrCoreRemaining.count {
             engrCoreListString = engrCoreListString + engrCoreRemaining[i] + "\n"
+        }
+        for i in 0..<asCoreRemaining.count {
+            asCoreListString = asCoreListString + asCoreRemaining[i] + "\n"
         }
         var finalString: String
         var finalString2: String
@@ -106,7 +128,8 @@ class ViewControllerInfo: UIViewController {
         finalString = finalString + String(getBreadthRemain())
         finalString2 = "core Remain\n" + coreListString
         if (degree?.getDegree() == "Bachelor of Arts") {
-            
+            finalString2 = finalString2 + "A&S core Remain\n" + asCoreListString
+            finalString = finalString + "\n phed" + String(getAsPhed())
         } else {
             finalString2 = finalString2 + "engr core Remain\n" + engrCoreListString
             finalString = finalString + "\ndepth remain" + String (getDepthRemain())
@@ -127,8 +150,11 @@ class ViewControllerInfo: UIViewController {
         stat = ViewControllerStat()
         engrCore = TableViewControllerENGR()
         engrPhed = ViewControllerENGR()
+        asCore = TableViewControllerA_S()
+        asPhed = ViewControllerA_S()
         coreRemaining = getCoreRemain()
         engrCoreRemaining = getEngrCoreRemain()
+        asCoreRemaining = getAsCoreRemain()
         print(core?.getCore())
         print ("remain")
         label.text = self.getInfo()[0]
