@@ -8,6 +8,7 @@
 
 import UIKit
 
+// storing the user input
 var techNum: String!
 class ViewControllerTech: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate  {
     
@@ -34,6 +35,7 @@ class ViewControllerTech: UIViewController, UIPickerViewDataSource, UIPickerView
         techNum = techs[row]
     }
     
+    // getting the user input
     func getHowMany() -> String {
         return techNum
     }

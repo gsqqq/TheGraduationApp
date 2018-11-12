@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+// storing the user input
 var engrCoreChosen:[String] = []
 
 class TableViewControllerENGR: UITableViewController {
@@ -19,6 +19,7 @@ class TableViewControllerENGR: UITableViewController {
         super.viewDidLoad()
     }
     
+    // getting the user input
     func getEngrCore() -> [String]{
         return engrCoreChosen
     }

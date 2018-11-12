@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+// storing the user input
 var statStatus: String!
 class ViewControllerStat: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
@@ -33,6 +33,7 @@ class ViewControllerStat: UIViewController, UIPickerViewDataSource, UIPickerView
         statStatus = stat[row]
     }
     
+    // getting the user input
     func getStatCompleted() -> String {
         return statStatus
     }

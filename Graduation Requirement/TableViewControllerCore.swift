@@ -8,6 +8,7 @@
 
 import UIKit
 
+// storing the user input
 var coreChosen:[String] = []
 
 class TableViewControllerCore: UITableViewController {
@@ -17,6 +18,7 @@ class TableViewControllerCore: UITableViewController {
     
     // MARK: - Table view data source
     
+    // getting the user input
     func getCore() -> [String]{
         return coreChosen
     }
@@ -42,12 +44,14 @@ class TableViewControllerCore: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark {
+            // remove from coreChosen if unselect
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
             var indexToRemove = coreChosen.firstIndex(of:cores[indexPath.row])
             coreChosen.remove(at: indexToRemove!)
         }
         else {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+            // append to coreChosen is select
             coreChosen.append(cores[indexPath.row])
             
         }

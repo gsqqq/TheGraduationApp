@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+// storing the user input
 var phedNum: String!
 class ViewControllerENGR: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
@@ -32,7 +32,7 @@ class ViewControllerENGR: UIViewController, UIPickerViewDataSource, UIPickerView
         phedText.text = phed[row]
         phedNum = phed[row]
     }
-    
+    // getting the user input
     func getHowMany() -> String {
         return phedNum
     }

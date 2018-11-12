@@ -8,6 +8,7 @@
 
 import UIKit
 
+// storing the user input
 var degreeChosen: String!
 
 class ViewControllerDegree: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate  {
@@ -36,6 +37,7 @@ class ViewControllerDegree: UIViewController, UIPickerViewDataSource, UIPickerVi
         degreeChosen = degrees[row]
     }
     
+    // getting the user input
     func getDegree() -> String {
         return degreeChosen
     }

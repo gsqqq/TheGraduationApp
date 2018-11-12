@@ -8,6 +8,7 @@
 
 import UIKit
 
+// storing the user input
 var asCoreChosen:[String] = []
 
 class TableViewControllerA_S: UITableViewController {
@@ -20,6 +21,7 @@ class TableViewControllerA_S: UITableViewController {
         super.viewDidLoad()
     }
     
+    // getting the user input
     func getAsCore() -> [String]{
         return asCoreChosen
     }

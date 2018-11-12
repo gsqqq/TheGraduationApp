@@ -8,6 +8,7 @@
 
 import UIKit
 
+// storing the user input
 var yearChosen: String!
 
 class ViewControllerYear: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
@@ -40,6 +41,7 @@ class ViewControllerYear: UIViewController, UIPickerViewDataSource, UIPickerView
         yearChosen = years[row]
     }
     
+    // getting the user input
     func getYear() -> String {
         return yearChosen
     }
