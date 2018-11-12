@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+// storing the user input
 var depthNum: String!
 
 class ViewControllerDepth: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
@@ -55,6 +55,7 @@ class ViewControllerDepth: UIViewController, UIPickerViewDataSource, UIPickerVie
         }
     }
     
+    // getting the user input
     func getHowMany() -> String {
         return depthNum
     }
