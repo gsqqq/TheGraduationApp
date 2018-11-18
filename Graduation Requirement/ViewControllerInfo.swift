@@ -146,12 +146,12 @@ class ViewControllerInfo: UIViewController {
      *  calculate course schedule
      */
     func getInfo() -> [String] {
-        var yearString = year?.getYear()
-        var techString = tech?.getHowMany()
-        var degreeString = degree?.getDegree()
-        var coreList = core?.getCore()
-        var breadthString = breadth?.getHowMany()
-        var engrCoreList = engrCore?.getEngrCore()
+        let yearString = year?.getYear()
+        let techString = tech?.getHowMany()
+        let degreeString = degree?.getDegree()
+        let coreList = core?.getCore()
+        let breadthString = breadth?.getHowMany()
+        let engrCoreList = engrCore?.getEngrCore()
         var coreListString: String = ""
         var engrCoreListString: String = ""
         var asCoreListString: String = ""
@@ -162,24 +162,19 @@ class ViewControllerInfo: UIViewController {
         
         var finalString: String
         var finalString2: String
-        finalString = yearString! + "\n" + degreeString! + "\n"
-        finalString = finalString + "tech remain"
-        finalString = finalString + String(getTechRemain()) + "\nbreadth remain"
-        finalString = finalString + String(getBreadthRemain())
-        finalString2 = "core Remain\n" + coreListString
+        finalString = ""
+        finalString2 = ""
         if (degree?.getDegree() == "Bachelor of Arts") {
             for i in 0..<asCoreRemaining.count {
                 courseList.append(asCoreRemaining[i])
                 asCoreListString = asCoreListString + asCoreRemaining[i] + "\n"
             }
-            finalString2 = finalString2 + "A&S core Remain\n" + asCoreListString
             if getAsPhed() > 0 {
-                var num = Int(getAsPhed() / 0.5)
-                for i in 0..<num {
+                let num = Int(getAsPhed() / 0.5)
+                for _ in 0..<num {
                     courseList.append("PHED 0.5")
                 }
             }
-            finalString = finalString + "\n phed" + String(getAsPhed())
         } else {
             for i in 0..<engrCoreRemaining.count {
                 courseList.append(engrCoreRemaining[i])
@@ -189,17 +184,14 @@ class ViewControllerInfo: UIViewController {
                 courseList.append("Statistics")
             }
             if getEngrPhed() > 0 {
-                var num = Int(getEngrPhed() / 0.5)
-                for i in 0..<num {
+                let num = Int(getEngrPhed() / 0.5)
+                for _ in 0..<num {
                     courseList.append("PHED 0.5")
                 }
             }
             for i in 0..<getDepthRemain() {
                 courseList.append("Depth Requirement" + String(i+1))
             }
-            finalString2 = finalString2 + "engr core Remain\n" + engrCoreListString
-            finalString = finalString + "\ndepth remain" + String (getDepthRemain())
-            finalString = finalString + "\n stat" + String(getStats()) + "\n phed" + String(getEngrPhed())
         }
         for i in 0..<getTechRemain() {
             courseList.append("Technical Elective" + String(i+1))
@@ -207,14 +199,21 @@ class ViewControllerInfo: UIViewController {
         for i in 0..<getBreadthRemain() {
             courseList.append("Breadth Elective" + String(i+1))
         }
-        return [finalString,finalString2]
+        let schedule:[[String]]
+        schedule = getSchedule()
+        for i in 0..<schedule.count {
+            for j in 0..<schedule[i].count {
+                finalString = finalString + schedule[i][j] + "\n"
+            }
+            finalString = finalString + "\n"
+        }
+        return [finalString,finalString]
     }
     
     /*
      * getter function for courseList
      */
     func getCourseList() -> [String] {
-        print(courseList)
         return courseList
     }
     
@@ -223,10 +222,12 @@ class ViewControllerInfo: UIViewController {
      */
     func getSchedule() -> [[String]] {
         var l:[[String]] = [[]]
-        for i in 0..<scheduleList.count/5 {
+        for i in 0..<scheduleList.count/5 + 1 {
             var j:[String] = []
             for k in 0..<5 {
-                j.append(scheduleList[i*5+k])
+                if (i*5+k < scheduleList.count){
+                    j.append(scheduleList[i*5+k])
+                }
             }
             l.append(j)
         }
@@ -251,7 +252,6 @@ class ViewControllerInfo: UIViewController {
         asCoreRemaining = getAsCoreRemain()
         label.text = self.getInfo()[0]
         scheduleList = getCourseList()
-        print(getSchedule())
         label2.text = self.getInfo()[1]
         // Do any additional setup after loading the view, typically from a nib.
     }
