@@ -13,6 +13,12 @@
 		1892375421865BF5000E2AD0 /* ViewControllerCoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892375321865BF5000E2AD0 /* ViewControllerCoreTest.swift */; };
 		1892375821865DF0000E2AD0 /* ViewControllerDegreeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892375721865DF0000E2AD0 /* ViewControllerDegreeTest.swift */; };
 		1892375A2186602C000E2AD0 /* ViewControllerInfoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189237592186602C000E2AD0 /* ViewControllerInfoTest.swift */; };
+		18F5E59F219A4B450003ABC0 /* TestBaInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5E59E219A4B450003ABC0 /* TestBaInfo.swift */; };
+		18F5E5A1219A4E0E0003ABC0 /* TestBsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5E5A0219A4E0E0003ABC0 /* TestBsInfo.swift */; };
+		18F5E5A5219A53F10003ABC0 /* TestBaPhed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5E5A4219A53F10003ABC0 /* TestBaPhed.swift */; };
+		18F5E5A7219A56D40003ABC0 /* TestBsStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5E5A6219A56D40003ABC0 /* TestBsStats.swift */; };
+		18F5E5A9219A58C90003ABC0 /* TestBsDepthTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5E5A8219A58C90003ABC0 /* TestBsDepthTrack.swift */; };
+		18F5E5AB219A5C160003ABC0 /* TestBsDepth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5E5AA219A5C160003ABC0 /* TestBsDepth.swift */; };
 		CE2A18922185573F007E449A /* ViewControllerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A18912185573F007E449A /* ViewControllerInfo.swift */; };
 		F071CE112196B6E400ED4700 /* ViewControllerA&S.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071CE102196B6E400ED4700 /* ViewControllerA&S.swift */; };
 		F071CE132196BEDE00ED4700 /* TableViewControllerA_S.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071CE122196BEDE00ED4700 /* TableViewControllerA_S.swift */; };
@@ -66,13 +72,19 @@
 		1892375321865BF5000E2AD0 /* ViewControllerCoreTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCoreTest.swift; sourceTree = "<group>"; };
 		1892375721865DF0000E2AD0 /* ViewControllerDegreeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDegreeTest.swift; sourceTree = "<group>"; };
 		189237592186602C000E2AD0 /* ViewControllerInfoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInfoTest.swift; sourceTree = "<group>"; };
+		18F5E59E219A4B450003ABC0 /* TestBaInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBaInfo.swift; sourceTree = "<group>"; };
+		18F5E5A0219A4E0E0003ABC0 /* TestBsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBsInfo.swift; sourceTree = "<group>"; };
+		18F5E5A4219A53F10003ABC0 /* TestBaPhed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBaPhed.swift; sourceTree = "<group>"; };
+		18F5E5A6219A56D40003ABC0 /* TestBsStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBsStats.swift; sourceTree = "<group>"; };
+		18F5E5A8219A58C90003ABC0 /* TestBsDepthTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBsDepthTrack.swift; sourceTree = "<group>"; };
+		18F5E5AA219A5C160003ABC0 /* TestBsDepth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBsDepth.swift; sourceTree = "<group>"; };
 		CE2A18912185573F007E449A /* ViewControllerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInfo.swift; sourceTree = "<group>"; };
-		F071CE102196B6E400ED4700 /* ViewControllerA&S.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ViewControllerA&S.swift"; path = "Graduation Requirement/ViewControllerA&S.swift"; sourceTree = "<group>"; };
-		F071CE122196BEDE00ED4700 /* TableViewControllerA_S.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewControllerA_S.swift; path = "Graduation Requirement/TableViewControllerA_S.swift"; sourceTree = "<group>"; };
-		F0878A862196D0F8003CFF73 /* TableViewControllerENGR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewControllerENGR.swift; path = "Graduation Requirement/TableViewControllerENGR.swift"; sourceTree = "<group>"; };
-		F0878A882196D14E003CFF73 /* ViewControllerENGR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerENGR.swift; path = "Graduation Requirement/ViewControllerENGR.swift"; sourceTree = "<group>"; };
-		F0878A8A2196D6B6003CFF73 /* ViewControllerStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerStat.swift; path = "Graduation Requirement/ViewControllerStat.swift"; sourceTree = "<group>"; };
-		F0878A8C2196E138003CFF73 /* ViewControllerDepth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerDepth.swift; path = "Graduation Requirement/ViewControllerDepth.swift"; sourceTree = "<group>"; };
+		F071CE102196B6E400ED4700 /* ViewControllerA&S.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerA&S.swift"; sourceTree = "<group>"; };
+		F071CE122196BEDE00ED4700 /* TableViewControllerA_S.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerA_S.swift; sourceTree = "<group>"; };
+		F0878A862196D0F8003CFF73 /* TableViewControllerENGR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerENGR.swift; sourceTree = "<group>"; };
+		F0878A882196D14E003CFF73 /* ViewControllerENGR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerENGR.swift; sourceTree = "<group>"; };
+		F0878A8A2196D6B6003CFF73 /* ViewControllerStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStat.swift; sourceTree = "<group>"; };
+		F0878A8C2196E138003CFF73 /* ViewControllerDepth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDepth.swift; sourceTree = "<group>"; };
 		F08E7BF4215D9F8F00F2CD8F /* Graduation Requirement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Graduation Requirement.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08E7BF7215D9F8F00F2CD8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F08E7BF9215D9F8F00F2CD8F /* ViewControllerYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerYear.swift; sourceTree = "<group>"; };
@@ -121,6 +133,8 @@
 		1892374B21864445000E2AD0 /* UITest */ = {
 			isa = PBXGroup;
 			children = (
+				18F5E59E219A4B450003ABC0 /* TestBaInfo.swift */,
+				18F5E5A6219A56D40003ABC0 /* TestBsStats.swift */,
 				18923751218658DF000E2AD0 /* ViewControllerBreadthTest.swift */,
 				1892374D218644AC000E2AD0 /* ViewControllerYearTest.swift */,
 				1892374C218644AB000E2AD0 /* Graduation RequirementUITests-Bridging-Header.h */,
@@ -128,6 +142,10 @@
 				1892375321865BF5000E2AD0 /* ViewControllerCoreTest.swift */,
 				1892375721865DF0000E2AD0 /* ViewControllerDegreeTest.swift */,
 				189237592186602C000E2AD0 /* ViewControllerInfoTest.swift */,
+				18F5E5A0219A4E0E0003ABC0 /* TestBsInfo.swift */,
+				18F5E5A4219A53F10003ABC0 /* TestBaPhed.swift */,
+				18F5E5A8219A58C90003ABC0 /* TestBsDepthTrack.swift */,
+				18F5E5AA219A5C160003ABC0 /* TestBsDepth.swift */,
 			);
 			path = UITest;
 			sourceTree = "<group>";
@@ -135,12 +153,6 @@
 		F08E7BEB215D9F8F00F2CD8F = {
 			isa = PBXGroup;
 			children = (
-				F0878A8C2196E138003CFF73 /* ViewControllerDepth.swift */,
-				F0878A8A2196D6B6003CFF73 /* ViewControllerStat.swift */,
-				F071CE122196BEDE00ED4700 /* TableViewControllerA_S.swift */,
-				F0878A862196D0F8003CFF73 /* TableViewControllerENGR.swift */,
-				F0878A882196D14E003CFF73 /* ViewControllerENGR.swift */,
-				F071CE102196B6E400ED4700 /* ViewControllerA&S.swift */,
 				1892374B21864445000E2AD0 /* UITest */,
 				F08E7BF6215D9F8F00F2CD8F /* Graduation Requirement */,
 				F08E7BF5215D9F8F00F2CD8F /* Products */,
@@ -161,6 +173,12 @@
 		F08E7BF6215D9F8F00F2CD8F /* Graduation Requirement */ = {
 			isa = PBXGroup;
 			children = (
+				F0878A8C2196E138003CFF73 /* ViewControllerDepth.swift */,
+				F0878A8A2196D6B6003CFF73 /* ViewControllerStat.swift */,
+				F071CE122196BEDE00ED4700 /* TableViewControllerA_S.swift */,
+				F0878A862196D0F8003CFF73 /* TableViewControllerENGR.swift */,
+				F0878A882196D14E003CFF73 /* ViewControllerENGR.swift */,
+				F071CE102196B6E400ED4700 /* ViewControllerA&S.swift */,
 				F0E5DE1221843A0C00DD2451 /* TableViewControllerCore.swift */,
 				F0E5DE08218421A000DD2451 /* ViewControllerRequirements.swift */,
 				F08E7BF7215D9F8F00F2CD8F /* AppDelegate.swift */,
@@ -358,9 +376,15 @@
 			files = (
 				1892375A2186602C000E2AD0 /* ViewControllerInfoTest.swift in Sources */,
 				1892375821865DF0000E2AD0 /* ViewControllerDegreeTest.swift in Sources */,
+				18F5E5AB219A5C160003ABC0 /* TestBsDepth.swift in Sources */,
+				18F5E59F219A4B450003ABC0 /* TestBaInfo.swift in Sources */,
 				18923750218655BA000E2AD0 /* ViewControllerTechTest.swift in Sources */,
+				18F5E5A1219A4E0E0003ABC0 /* TestBsInfo.swift in Sources */,
 				1892374E218644AC000E2AD0 /* ViewControllerYearTest.swift in Sources */,
 				18923752218658DF000E2AD0 /* ViewControllerBreadthTest.swift in Sources */,
+				18F5E5A5219A53F10003ABC0 /* TestBaPhed.swift in Sources */,
+				18F5E5A7219A56D40003ABC0 /* TestBsStats.swift in Sources */,
+				18F5E5A9219A58C90003ABC0 /* TestBsDepthTrack.swift in Sources */,
 				1892375421865BF5000E2AD0 /* ViewControllerCoreTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
