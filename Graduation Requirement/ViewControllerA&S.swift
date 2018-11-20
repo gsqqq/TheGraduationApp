@@ -8,7 +8,7 @@
 
 import UIKit
 // storing the user input
-var phedNumAs: String!
+var phedNumAs: String! = "0"
 class ViewControllerA_S: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet weak var phedText: UITextField!

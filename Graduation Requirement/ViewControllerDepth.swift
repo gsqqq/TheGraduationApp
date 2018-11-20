@@ -8,7 +8,7 @@
 
 import UIKit
 // storing the user input
-var depthNum: String!
+var depthNum: String! = "0"
 
 class ViewControllerDepth: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     

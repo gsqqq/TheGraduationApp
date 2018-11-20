@@ -8,7 +8,7 @@
 
 import UIKit
 
-var breadthNum: String!
+var breadthNum: String! = "0"
 
 class ViewControllerRequirements: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate  {
 

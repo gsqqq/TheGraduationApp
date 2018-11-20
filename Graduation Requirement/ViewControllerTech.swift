@@ -9,7 +9,7 @@
 import UIKit
 
 // storing the user input
-var techNum: String!
+var techNum: String! = "0"
 class ViewControllerTech: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate  {
     
     @IBOutlet weak var techText: UITextField!

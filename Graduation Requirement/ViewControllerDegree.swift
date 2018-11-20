@@ -9,7 +9,7 @@
 import UIKit
 
 // storing the user input
-var degreeChosen: String!
+var degreeChosen: String! = "Bachelor of Science"
 
 class ViewControllerDegree: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate  {
 

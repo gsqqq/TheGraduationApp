@@ -80,13 +80,15 @@ class ViewControllerInfo: UIViewController {
      *   that the user chose
      */
     func getBreadthRemain() -> Int {
-        if (tech?.getHowMany()) == ">=5" {
+        if (breadth?.getHowMany()) == ">=5" {
             return 0;
         }
         if (degree?.getDegree() == "Bachelor of Arts") {
             return 3 - Int((breadth?.getHowMany())!)!
         }
-        return 5 - Int((breadth?.getHowMany())!)!
+        else {
+            return 5 - Int((breadth?.getHowMany())!)!
+        }
     }
     
     /*
@@ -100,7 +102,9 @@ class ViewControllerInfo: UIViewController {
         if (degree?.getDegree() == "Bachelor of Arts") {
             return 4 - Int((tech?.getHowMany())!)!
         }
-        return 5 - Int((tech?.getHowMany())!)!
+        else {
+            return 5 - Int((tech?.getHowMany())!)!
+        }
     }
     
     /*
@@ -110,8 +114,9 @@ class ViewControllerInfo: UIViewController {
     func getDepthRemain() -> Int {
         if (depth?.getHowMany()) == ">=4" {
             return 0;
+        } else {
+            return 4 - Int((depth?.getHowMany())!)!
         }
-        return 4 - Int((depth?.getHowMany())!)!
     }
     
     /* If the BS student completed statistics

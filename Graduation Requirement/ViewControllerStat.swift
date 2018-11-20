@@ -8,7 +8,7 @@
 
 import UIKit
 // storing the user input
-var statStatus: String!
+var statStatus: String! = "Incompleted"
 class ViewControllerStat: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet weak var statText: UITextField!
