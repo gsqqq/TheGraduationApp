@@ -5,6 +5,8 @@
 //  Created by Yue Shu on 10/27/18.
 //  Copyright © 2018 EECS393. All rights reserved.
 //
+//  This class is The UI class for CS core courses querying
+//
 
 import UIKit
 
@@ -13,7 +15,7 @@ var coreChosen:[String] = []
 
 class TableViewControllerCore: UITableViewController {
     
-    
+    // choiecs
     let cores = ["EECS 132", "EECS 233", "EECS 281", "EECS 302", "EECS 340", "EECS 395"]
     
     // MARK: - Table view data source

@@ -5,6 +5,8 @@
 //  Created by Yue Shu on 11/10/18.
 //  Copyright © 2018 EECS393. All rights reserved.
 //
+//  This class is The UI class for BA core courses querying
+//
 
 import UIKit
 
@@ -13,6 +15,7 @@ var asCoreChosen:[String] = []
 
 class TableViewControllerA_S: UITableViewController {
 
+    // choiecs
     let a_s = ["MATH 125", "MATH 126", "ENGL 398", "ENGR 398","Arts & Humanities I", "Arts & Humanities II", "Natural Sciences I", "Natural Sciences II", "Social Sciences I", "Social Sciences II", "Quantitative Reasoning", "Global & Cultural Diversity", "SAGES First Year Seminar", "Sages University Seminar I", "Sages University Seminar II"]
     
     // MARK: - Table view data source
@@ -38,11 +41,13 @@ class TableViewControllerA_S: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark {
+            //remove if unselect
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
             var indexToRemove = asCoreChosen.firstIndex(of:a_s[indexPath.row])
             asCoreChosen.remove(at: indexToRemove!)
         }
         else {
+            //append if select
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
             asCoreChosen.append(a_s[indexPath.row])
         }

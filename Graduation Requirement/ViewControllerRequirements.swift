@@ -5,6 +5,8 @@
 //  Created by Yue Shu on 10/27/18.
 //  Copyright © 2018 EECS393. All rights reserved.
 //
+//  This class is The UI class for # breadth courses querying
+//
 
 import UIKit
 
@@ -16,6 +18,7 @@ class ViewControllerRequirements: UIViewController, UIPickerViewDataSource, UIPi
     @IBOutlet weak var breadthText: UITextField!
     @IBOutlet weak var breadthPicker: UIPickerView!
     
+    // choiecs
     let breadths = ["0", "1", "2", "3", "4", ">=5"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

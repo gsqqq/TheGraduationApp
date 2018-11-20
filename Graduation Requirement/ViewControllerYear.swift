@@ -5,6 +5,8 @@
 //  Created by Yue Shu on 9/27/18.
 //  Copyright © 2018 EECS393. All rights reserved.
 //
+//  This class is The UI class for graduation year querying
+//
 
 import UIKit
 
@@ -18,9 +20,7 @@ class ViewControllerYear: UIViewController, UIPickerViewDataSource, UIPickerView
     @IBOutlet weak var graduationYearLabel: UILabel!
     @IBOutlet weak var yearPicker: UIPickerView!
     
-    
-    
-    
+    // choiecs
     let years = ["2020", "2021"]
 
     

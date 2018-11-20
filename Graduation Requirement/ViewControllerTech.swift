@@ -5,6 +5,8 @@
 //  Created by Yue Shu on 10/27/18.
 //  Copyright © 2018 EECS393. All rights reserved.
 //
+//  This class is The UI class for # tech courses querying
+//
 
 import UIKit
 
@@ -15,7 +17,7 @@ class ViewControllerTech: UIViewController, UIPickerViewDataSource, UIPickerView
     @IBOutlet weak var techText: UITextField!
     @IBOutlet weak var techPicker: UIPickerView!
 
-    
+    // choiecs
     let techs = ["0", "1", "2", "3", "4", ">=5"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

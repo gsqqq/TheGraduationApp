@@ -5,6 +5,8 @@
 //  Created by Yue Shu on 10/26/18.
 //  Copyright © 2018 EECS393. All rights reserved.
 //
+//  This class is The UI class for degree querying
+//
 
 import UIKit
 
@@ -18,6 +20,7 @@ class ViewControllerDegree: UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBOutlet weak var degreeText: UITextField!
     @IBOutlet weak var degreePicker: UIPickerView!
     
+    // choiecs
     let degrees = ["Bachelor of Science", "Bachelor of Arts"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

@@ -5,6 +5,8 @@
 //  Created by Yue Shu on 11/10/18.
 //  Copyright © 2018 EECS393. All rights reserved.
 //
+//  This class is The UI class for # PHED courses querying
+//
 
 import UIKit
 // storing the user input
@@ -14,6 +16,7 @@ class ViewControllerA_S: UIViewController, UIPickerViewDataSource, UIPickerViewD
     @IBOutlet weak var phedText: UITextField!
     @IBOutlet weak var phedPicker: UIPickerView!
     
+    // choiecs
     let phed = ["0", "0.5", "1", "1.5", ">=2"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

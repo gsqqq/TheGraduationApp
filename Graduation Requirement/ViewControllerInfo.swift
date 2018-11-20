@@ -2,7 +2,7 @@
 //  ViewControllerInfo.swift
 //  Graduation Requirement
 //
-//  Created by 初始 on 10/27/18.
+//  Created by Melody on 10/27/18.
 //  Copyright © 2018 EECS393. All rights reserved.
 //
 // This class read all information from user input and
@@ -39,6 +39,7 @@ class ViewControllerInfo: UIViewController {
     var courseList:[String] = []
     var scheduleList:[String] = []
     
+    // variables from the UI
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var label: UILabel!
 
@@ -119,7 +120,8 @@ class ViewControllerInfo: UIViewController {
         }
     }
     
-    /* If the BS student completed statistics
+    /*
+     * If the BS student completed statistics
      *  requirement, return 1 if not
      */
     func getStats() -> Int {
@@ -129,8 +131,9 @@ class ViewControllerInfo: UIViewController {
         return 1;
     }
     
-    /* Calculate the PHED credits remaining
-     *  Seperate for BA and BS because they are from
+    /*
+     * Calculate the PHED credits remaining
+     *  Seperate for BS because they are from
      *  different view controller
      */
     func getEngrPhed() -> Double {
@@ -139,6 +142,12 @@ class ViewControllerInfo: UIViewController {
         }
         return 2 - Double((engrPhed?.getHowMany())!)!
     }
+    
+    /*
+     * Calculate the PHED credits remaining
+     *  Seperate for BA because they are from
+     *  different view controller
+     */
     func getAsPhed() -> Double {
         if (asPhed?.getHowMany()) == ">=2" {
             return 0;
@@ -146,7 +155,8 @@ class ViewControllerInfo: UIViewController {
         return 2 - Double((asPhed?.getHowMany())!)!
     }
     
-    /* Temperarily a helper function
+    /*
+     * Temperarily a helper function
      *  print out all course remaining
      *  calculate course schedule
      */
@@ -169,18 +179,21 @@ class ViewControllerInfo: UIViewController {
         var finalString2: String
         finalString = ""
         finalString2 = ""
-        if (degree?.getDegree() == "Bachelor of Arts") {
+        if (degree?.getDegree() == "Bachelor of Arts") { //BA
+            //Append BS core remaining
             for i in 0..<asCoreRemaining.count {
                 courseList.append(asCoreRemaining[i])
                 asCoreListString = asCoreListString + asCoreRemaining[i] + "\n"
             }
             if getAsPhed() > 0 {
                 let num = Int(getAsPhed() / 0.5)
+                //Append PHED courses
                 for _ in 0..<num {
                     courseList.append("PHED 0.5")
                 }
             }
-        } else {
+        } else {  //BS
+            // Append BS core remaining
             for i in 0..<engrCoreRemaining.count {
                 courseList.append(engrCoreRemaining[i])
                 engrCoreListString = engrCoreListString + engrCoreRemaining[i] + "\n"
@@ -194,10 +207,12 @@ class ViewControllerInfo: UIViewController {
                     courseList.append("PHED 0.5")
                 }
             }
+            // Append Depth remaining
             for i in 0..<getDepthRemain() {
                 courseList.append("Depth Requirement" + String(i+1))
             }
         }
+        // Append tech and breadth remaining
         for i in 0..<getTechRemain() {
             courseList.append("Technical Elective" + String(i+1))
         }
@@ -206,6 +221,7 @@ class ViewControllerInfo: UIViewController {
         }
         let schedule:[[String]]
         schedule = getSchedule()
+        // print out all courses
         for i in 0..<schedule.count {
             for j in 0..<schedule[i].count {
                 finalString = finalString + schedule[i][j] + "\n"
@@ -224,9 +240,11 @@ class ViewControllerInfo: UIViewController {
     
     /*
      * getter function for schedule list
+     * append courses into Schedule of 5 in a line
      */
     func getSchedule() -> [[String]] {
         var l:[[String]] = [[]]
+        // adding all courses 5 by 5
         for i in 0..<scheduleList.count/5 + 1 {
             var j:[String] = []
             for k in 0..<5 {
@@ -240,6 +258,7 @@ class ViewControllerInfo: UIViewController {
     }
     
     override func viewDidLoad() {
+        //Initializations
         super.viewDidLoad()
         year = ViewControllerYear()
         tech = ViewControllerTech()
