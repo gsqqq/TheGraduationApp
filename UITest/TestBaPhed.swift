@@ -2,7 +2,7 @@
 //  TestBaPhed.swift
 //  Graduation RequirementUITests
 //
-//  Created by 毛毛 on 2018/11/12.
+//  Created by Shiqing.
 //  Copyright © 2018 EECS393. All rights reserved.
 //
 
@@ -11,22 +11,23 @@ import XCTest
 class TestBaPhed: XCTestCase {
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+        // setup code here
+        
+        // stop immediately when a failure occurs
         continueAfterFailure = false
 
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
+        // launch the application
         XCUIApplication().launch()
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+    
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        
     }
-
-    func testBaPhed() {
+    
+    //Test the correct functionality of users selecting how many PHED courses they have already taken
+    func testBsPhed() {
         
         let app = XCUIApplication()
         app/*@START_MENU_TOKEN@*/.pickerWheels["2020"].press(forDuration: 0.7);/*[[".pickers.pickerWheels[\"2020\"]",".tap()",".press(forDuration: 0.7);",".pickerWheels[\"2020\"]"],[[[-1,3,1],[-1,0,1]],[[-1,2],[-1,1]]],[0,0]]@END_MENU_TOKEN@*/

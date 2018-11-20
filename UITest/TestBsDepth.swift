@@ -1,8 +1,8 @@
 //
 //  TestBsDepth.swift
-//  Graduation RequirementUITests
+//  Graduation RequirementTests
 //
-//  Created by 毛毛 on 2018/11/12.
+//  Created by Shiqing.
 //  Copyright © 2018 EECS393. All rights reserved.
 //
 
@@ -11,23 +11,23 @@ import XCTest
 class TestBsDepth: XCTestCase {
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        // Setup code here
 
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+        // stop immediately when a failure occurs
         continueAfterFailure = false
 
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
+        // launch the application
         XCUIApplication().launch()
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        // teardown code here.
     }
-
+    
+    /* Test the correct functionality of users selecting how many depth elective courses they
+       have already taken*/
     func testBsDpeth() {
-        
         
         let app = XCUIApplication()
         app.pickerWheels["2020"].swipeDown();
@@ -74,8 +74,6 @@ class TestBsDepth: XCTestCase {
         elementsQuery/*@START_MENU_TOKEN@*/.pickerWheels["Software Engineering"].press(forDuration: 1.5);/*[[".pickers.pickerWheels[\"Software Engineering\"]",".tap()",".press(forDuration: 1.5);",".pickerWheels[\"Software Engineering\"]"],[[[-1,3,1],[-1,0,1]],[[-1,2],[-1,1]]],[0,0]]@END_MENU_TOKEN@*/
         elementsQuery/*@START_MENU_TOKEN@*/.pickerWheels["0"]/*[[".pickers.pickerWheels[\"0\"]",".pickerWheels[\"0\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.swipeUp()
         elementsQuery.buttons["Confirm"].tap()
-        
-        
         
         
     }
