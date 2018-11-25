@@ -21,7 +21,7 @@ class ViewControllerYear: UIViewController, UIPickerViewDataSource, UIPickerView
     @IBOutlet weak var yearPicker: UIPickerView!
     
     // choiecs
-    let years = ["2020", "2021"]
+    let years = ["Spring 2021", "Fall 2021", "Spring 2022", "Fall 2022"]
 
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
