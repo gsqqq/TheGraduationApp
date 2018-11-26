@@ -55,8 +55,7 @@ class ViewControllerInfo: UIViewController {
         "Breadth Elective",
         "Breadth Elective",
         "MATH 223 or MATH 227",
-        "ENGR 398",
-        "ENGL 398",
+        "ENGR 398 & ENGL 398",
         "Technical Elective",
         "Technical Elective",
         "Depth Requirement",
@@ -93,7 +92,7 @@ class ViewControllerInfo: UIViewController {
         "Technical Elective",
         "Technical Elective",
         "EECS 395",
-        "Department Capstone",
+        "Department Seminar",
         "At least 30 credits Open Electives"
 ]
     
@@ -132,12 +131,13 @@ class ViewControllerInfo: UIViewController {
      * Get Arts and science core course remaining by removing user selected
      *   courses from asCoreRemaining
      */
+    /*
     func getAsCoreRemain() -> [String] {
         for i in 0..<asCore!.getAsCore().count {
             asCoreRemaining.remove(at: asCoreRemaining.firstIndex(of: asCore!.getAsCore()[i])!)
         }
         return asCoreRemaining
-    }
+    }*/
     
     /*
      * Get breadth course remaining regarding to the degree
@@ -342,6 +342,51 @@ class ViewControllerInfo: UIViewController {
             }
         }
         finalList = getSchedule()
+        if (degree?.getDegree() == "Bachelor of Arts") {
+            if getAsPhed() > 0 {
+                let num = Int (getAsPhed() / 0.5)
+                if (num == 1) {
+                    finalList[0].append("PHED 0.5")
+                }
+                if (num == 2) {
+                    finalList[0].append("PHED 0.5")
+                    finalList[0].append("PHED 0.5")
+                }
+                if (num == 3) {
+                    finalList[0].append("PHED 0.5")
+                    finalList[0].append("PHED 0.5")
+                    finalList[1].append("PHED 0.5")
+                }
+                if (num == 4) {
+                    finalList[0].append("PHED 0.5")
+                    finalList[0].append("PHED 0.5")
+                    finalList[1].append("PHED 0.5")
+                    finalList[1].append("PHED 0.5")
+                }
+            }
+        } else {
+            if getEngrPhed() > 0 {
+                let num = Int (getEngrPhed() / 0.5)
+                if (num == 1) {
+                    finalList[0].append("PHED 0.5")
+                }
+                if (num == 2) {
+                    finalList[0].append("PHED 0.5")
+                    finalList[0].append("PHED 0.5")
+                }
+                if (num == 3) {
+                    finalList[0].append("PHED 0.5")
+                    finalList[0].append("PHED 0.5")
+                    finalList[1].append("PHED 0.5")
+                }
+                if (num == 4) {
+                    finalList[0].append("PHED 0.5")
+                    finalList[0].append("PHED 0.5")
+                    finalList[1].append("PHED 0.5")
+                    finalList[1].append("PHED 0.5")
+                }
+            }
+        }
         print(finalList)
         return [finalString,finalString]
     }
@@ -447,7 +492,6 @@ class ViewControllerInfo: UIViewController {
         asPhed = ViewControllerA_S()
         coreRemaining = getCoreRemain()
         engrCoreRemaining = getEngrCoreRemain()
-        asCoreRemaining = getAsCoreRemain()
         //label.text = self.getInfo()[0]
         scheduleList = getCourseList()
         label2.text = self.getInfo()[1]

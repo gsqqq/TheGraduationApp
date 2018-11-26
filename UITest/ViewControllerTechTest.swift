@@ -29,7 +29,7 @@ class ViewControllerTechTest: XCTestCase {
     func testTech() {
         
         let app = XCUIApplication()
-        app/*@START_MENU_TOKEN@*/.pickerWheels["2020"]/*[[".pickers.pickerWheels[\"2020\"]",".pickerWheels[\"2020\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.pickerWheels["Spring 2020"].tap()
         
         let confirmButton = app.buttons["Confirm"]
         confirmButton.tap()

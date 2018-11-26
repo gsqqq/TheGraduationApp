@@ -30,7 +30,7 @@ class TestBsDepth: XCTestCase {
     func testBsDpeth() {
         
         let app = XCUIApplication()
-        app.pickerWheels["2020"].swipeDown();
+        app.pickerWheels["Spring 2020"].swipeDown();
         
         let confirmButton = app.buttons["Confirm"]
         confirmButton.tap()

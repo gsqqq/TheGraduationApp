@@ -16,7 +16,7 @@ var asCoreChosen:[String] = []
 class TableViewControllerA_S: UITableViewController {
 
     // choiecs
-    let a_s = ["MATH 125", "MATH 126", "Department Capstone","Arts & Humanities I", "Arts & Humanities II", "Natural Sciences I", "Natural Sciences II", "Social Sciences I", "Social Sciences II", "Quantitative Reasoning", "Global & Cultural Diversity", "First Year Seminar", "University Seminar I", "University Seminar II"]
+    let a_s = ["MATH 125", "MATH 126", "Department Seminar","Arts & Humanities I", "Arts & Humanities II", "Natural Sciences I", "Natural Sciences II", "Social Sciences I", "Social Sciences II", "Quantitative Reasoning", "Global & Cultural Diversity", "First Year Seminar", "University Seminar I", "University Seminar II"]
     
     // MARK: - Table view data source
     

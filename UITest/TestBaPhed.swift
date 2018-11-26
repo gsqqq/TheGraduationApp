@@ -30,7 +30,7 @@ class TestBaPhed: XCTestCase {
     func testBsPhed() {
         
         let app = XCUIApplication()
-        app/*@START_MENU_TOKEN@*/.pickerWheels["2020"].press(forDuration: 0.7);/*[[".pickers.pickerWheels[\"2020\"]",".tap()",".press(forDuration: 0.7);",".pickerWheels[\"2020\"]"],[[[-1,3,1],[-1,0,1]],[[-1,2],[-1,1]]],[0,0]]@END_MENU_TOKEN@*/
+        app.pickerWheels["Spring 2020"].press(forDuration: 0.7);
         
         let confirmButton = app.buttons["Confirm"]
         confirmButton.tap()

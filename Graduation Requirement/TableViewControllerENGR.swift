@@ -15,7 +15,7 @@ var engrCoreChosen:[String] = []
 class TableViewControllerENGR: UITableViewController {
 
     // choiecs
-    let engr = ["MATH 121", "MATH 122 or MATH 124", "MATH 223 or MATH 227", "MATH 201 or MATH 307", "CHEM 111", "ENGR 145", "PHYS 121 or PHYS 123", "PHYS 122 or PHYS 124", "ENGR 398", "ENGL 398", "First Year Seminar", "University Seminar I", "University Seminar II", "Arts & Humanity or Social Science I", "Arts & Humanity or Social Science II", "Arts & Humanity or Social Science III", "Arts & Humanity or Social Science IV" ]
+    let engr = ["MATH 121", "MATH 122 or MATH 124", "MATH 223 or MATH 227", "MATH 201 or MATH 307", "CHEM 111", "ENGR 145", "PHYS 121 or PHYS 123", "PHYS 122 or PHYS 124", "ENGR 398 & ENGL 398", "First Year Seminar", "University Seminar I", "University Seminar II", "Arts & Humanity or Social Science I", "Arts & Humanity or Social Science II", "Arts & Humanity or Social Science III", "Arts & Humanity or Social Science IV" ]
     
     // MARK: - Table view data source
     override func viewDidLoad() {

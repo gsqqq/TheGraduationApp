@@ -30,7 +30,7 @@ class ViewControllerCoreTest: XCTestCase {
     func testCoreCaseAdd() {
         
         let app = XCUIApplication()
-        app/*@START_MENU_TOKEN@*/.pickerWheels["2020"].press(forDuration: 0.5);/*[[".pickers.pickerWheels[\"2020\"]",".tap()",".press(forDuration: 0.5);",".pickerWheels[\"2020\"]"],[[[-1,3,1],[-1,0,1]],[[-1,2],[-1,1]]],[0,0]]@END_MENU_TOKEN@*/
+        app.pickerWheels["Spring 2020"].press(forDuration: 0.5);
         app.buttons["Confirm"].tap()
         app.buttons["Select"].tap()
         
@@ -48,7 +48,7 @@ class ViewControllerCoreTest: XCTestCase {
     func testCoreCaseRemove() {
         
         let app = XCUIApplication()
-        app/*@START_MENU_TOKEN@*/.pickerWheels["2020"]/*[[".pickers.pickerWheels[\"2020\"]",".pickerWheels[\"2020\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.pickerWheels["Spring 2020"].tap()
         app.buttons["Confirm"].tap()
         app.buttons["Select"].tap()
         
