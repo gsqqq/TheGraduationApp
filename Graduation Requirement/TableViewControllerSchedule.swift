@@ -15,24 +15,45 @@ struct semesterData {
     //course cells
     var courseData = [String]()
 }
-
+var scheduleData : ViewControllerInfo? = nil
 class TableViewControllerSchedule: UITableViewController {
     
     var tableViewData = [semesterData]()
-    var scheduleData : ViewControllerInfo? = nil
+    
     
     // MARK: - Table view data source
     override func viewDidLoad() {
         super.viewDidLoad()
         scheduleData = ViewControllerInfo()
         print(scheduleData)
-        print(scheduleData?.finalList)
+        print(finalList)
         //melody please modify this part to generate the actual course schedule
         //title should be the semster
         //course data should be an array of String representing courses to be scheduled for each semester
-        tableViewData = [semesterData(opened: false, title: "Spring 2019", courseData: (scheduleData?.finalList[0])!),
-                         semesterData(opened: false, title: "Fall 2019", courseData: ["Course 1", "Course 2", "Course 3"]),
-                         semesterData(opened: false, title: "Spring 2020", courseData: ["Course 1", "Course 2", "Course 3"])]
+        if (yearChosen == "Spring 2021" ){
+        tableViewData = [semesterData(opened: false, title: "Spring 2019", courseData: (finalList[0])),
+                         semesterData(opened: false, title: "Fall 2019", courseData: finalList[1]),
+                         semesterData(opened: false, title: "Spring 2020", courseData: finalList[2]),]
+        } else if (yearChosen == "Fall 2021" ) {
+            tableViewData = [semesterData(opened: false, title: "Spring 2019", courseData: (finalList[0])),
+                             semesterData(opened: false, title: "Fall 2019", courseData: finalList[1]),
+                             semesterData(opened: false, title: "Spring 2020", courseData: finalList[2]),
+                             semesterData(opened: false, title: "Fall 2020", courseData: finalList[3]),
+            ]
+        } else if (yearChosen == "Spring 2022" ) {
+            tableViewData = [semesterData(opened: false, title: "Spring 2019", courseData: (finalList[0])),
+                             semesterData(opened: false, title: "Fall 2019", courseData: finalList[1]),
+                             semesterData(opened: false, title: "Spring 2020", courseData: finalList[2]),
+                             semesterData(opened: false, title: "Fall 2020", courseData: finalList[3]),
+            semesterData(opened: false, title: "Spring 2021", courseData: finalList[4]),]
+        } else {
+            tableViewData = [semesterData(opened: false, title: "Spring 2019", courseData: (finalList[0])),
+                             semesterData(opened: false, title: "Fall 2019", courseData: finalList[1]),
+                             semesterData(opened: false, title: "Spring 2020", courseData: finalList[2]),
+                             semesterData(opened: false, title: "Fall 2020", courseData: finalList[3]),
+                             semesterData(opened: false, title: "Spring 2021", courseData: finalList[4]),
+            semesterData(opened: false, title: "Fall 2021", courseData: finalList[5])]
+        }
     }
     
     override func didReceiveMemoryWarning() {

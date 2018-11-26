@@ -10,6 +10,7 @@
 
 import UIKit
 
+var finalList:[[String]] = []
 class ViewControllerInfo: UIViewController {
 
     
@@ -100,7 +101,6 @@ class ViewControllerInfo: UIViewController {
     var courseList:[String] = []
     var scheduleList:[String] = []
     var takenList:[String] = []
-    var finalList:[[String]] = []
     var numPhed = 0
     
     // variables from the UI
