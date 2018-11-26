@@ -108,24 +108,24 @@ class ViewControllerInfo: UIViewController {
     /*
      * Get CS core course remaining by removing user selected
      *   courses from coreRemaining
-     */
+     *//*
     func getCoreRemain() -> [String] {
         for i in 0..<core!.getCore().count {
             coreRemaining.remove(at: coreRemaining.firstIndex(of: core!.getCore()[i])!)
         }
         return coreRemaining
-    }
+    }*/
     
     /*
      * Get Engineering core course remaining by removing user selected
      *   courses from engrCoreRemaining
      */
-    func getEngrCoreRemain() -> [String] {
+    /*func getEngrCoreRemain() -> [String] {
         for i in 0..<engrCore!.getEngrCore().count {
             engrCoreRemaining.remove(at: engrCoreRemaining.firstIndex(of: engrCore!.getEngrCore()[i])!)
         }
         return engrCoreRemaining
-    }
+    }*/
     
     /*
      * Get Arts and science core course remaining by removing user selected
@@ -142,7 +142,7 @@ class ViewControllerInfo: UIViewController {
     /*
      * Get breadth course remaining regarding to the degree
      *   that the user chose
-     */
+ 
     func getBreadthRemain() -> Int {
         if (breadth?.getHowMany()) == ">=5" {
             return 0;
@@ -153,11 +153,11 @@ class ViewControllerInfo: UIViewController {
         else {
             return 5 - Int((breadth?.getHowMany())!)!
         }
-    }
+    }*/
     
     func getBreadthTaken() -> Int {
         if (degree?.getDegree() == "Bachelor of Arts") {
-            if (breadth?.getHowMany()) == ">=5" {
+            if (breadth?.getHowMany()) == ">=5" || (breadth?.getHowMany()) == "4" || (breadth?.getHowMany()) == "3" {
                 return 3;
             }
             return Int((breadth?.getHowMany())!)!
@@ -173,7 +173,7 @@ class ViewControllerInfo: UIViewController {
     /*
      * Get technical course remaining regarding to the degree
      *   that the user chose
-     */
+ 
     func getTechRemain() -> Int {
         if (tech?.getHowMany()) == ">=5" {
             return 0;
@@ -184,11 +184,11 @@ class ViewControllerInfo: UIViewController {
         else {
             return 5 - Int((tech?.getHowMany())!)!
         }
-    }
+    }*/
     
     func getTechTaken() -> Int {
         if (degree?.getDegree() == "Bachelor of Arts") {
-            if (tech?.getHowMany()) == ">=5" {
+            if (tech?.getHowMany()) == ">=5" || (tech?.getHowMany()) == "4" {
                 return 3;
             }
             return Int((tech?.getHowMany())!)!
@@ -204,14 +204,14 @@ class ViewControllerInfo: UIViewController {
     /*
      * Get depth course remaining regarding to the degree
      *   that the user chose (bs only)
-     */
+ 
     func getDepthRemain() -> Int {
         if (depth?.getHowMany()) == ">=4" {
             return 0;
         } else {
             return 4 - Int((depth?.getHowMany())!)!
         }
-    }
+    }*/
     
     func getDepthTaken () -> Int {
         if (depth?.getHowMany()) == ">=4" {
@@ -324,7 +324,7 @@ class ViewControllerInfo: UIViewController {
         var taken = getTakenList()
         if (degree?.getDegree() == "Bachelor of Arts") {
             for i in 0..<taken.count {
-                //print(taken[i])
+                print(taken[i])
                 let indexToRemove = optimalCoursesBA.firstIndex(of: taken[i])
                 optimalCoursesBA.remove(at: indexToRemove!)
             }
@@ -388,7 +388,7 @@ class ViewControllerInfo: UIViewController {
             }
         }
         print(finalList)
-        return [finalString,finalString]
+        return ["",""]
     }
     
     /*
@@ -490,9 +490,9 @@ class ViewControllerInfo: UIViewController {
         engrPhed = ViewControllerENGR()
         asCore = TableViewControllerA_S()
         asPhed = ViewControllerA_S()
-        coreRemaining = getCoreRemain()
-        engrCoreRemaining = getEngrCoreRemain()
-        //label.text = self.getInfo()[0]
+       // coreRemaining = getCoreRemain()
+        //engrCoreRemaining = getEngrCoreRemain()
+        label.text = ""
         scheduleList = getCourseList()
         label2.text = self.getInfo()[1]
         // Do any additional setup after loading the view, typically from a nib.
