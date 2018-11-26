@@ -76,7 +76,6 @@ class ViewControllerInfo: UIViewController {
         "Arts & Humanities II",
         "Natural Sciences I",
         "Natural Sciences II",
-        "Arts & Humanities I",
         "Social Sciences I", "Social Sciences II",
         "MATH 126",
         "EECS 233",
@@ -89,13 +88,13 @@ class ViewControllerInfo: UIViewController {
         "Technical Elective",
         "Technical Elective",
         "University Seminar II",
-        "Statistics",
         "EECS 340",
         "Breadth Elective",
         "Technical Elective",
         "Technical Elective",
         "EECS 395",
-        "Department Capstone"
+        "Department Capstone",
+        "At least 30 credits Open Electives"
 ]
     
     var courseList:[String] = []
@@ -297,7 +296,7 @@ class ViewControllerInfo: UIViewController {
                 takenList.append(engrCore!.getEngrCore()[i])
             }
             if getStats()==0 {
-                courseList.append("Statistics")
+                takenList.append("Statistics")
             }
             for _ in 0..<getDepthTaken() {
                 takenList.append("Depth Requirement")// + String(i+1))
@@ -362,16 +361,16 @@ class ViewControllerInfo: UIViewController {
         let graduationTerm = year?.getYear()
         var terms = 0
         var k = 0
-        if (graduationTerm == "Spring 2021") {
+        if (graduationTerm == "Spring 2020") {
             terms = 3
         }
-        if (graduationTerm == "Fall 2021") {
+        if (graduationTerm == "Fall 2020") {
             terms = 4
         }
-        if (graduationTerm == "Spring 2022") {
+        if (graduationTerm == "Spring 2021") {
             terms = 5
         }
-        if (graduationTerm == "Fall 2022") {
+        if (graduationTerm == "Fall 2021") {
             terms = 6
         }
         if (degree?.getDegree() == "Bachelor of Arts") {

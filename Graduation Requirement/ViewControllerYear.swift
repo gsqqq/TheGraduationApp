@@ -11,7 +11,7 @@
 import UIKit
 
 // storing the user input
-var yearChosen: String! = "Spring 2021"
+var yearChosen: String! = "Spring 2020"
 
 class ViewControllerYear: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
@@ -21,7 +21,7 @@ class ViewControllerYear: UIViewController, UIPickerViewDataSource, UIPickerView
     @IBOutlet weak var yearPicker: UIPickerView!
     
     // choiecs
-    let years = ["Spring 2021", "Fall 2021", "Spring 2022", "Fall 2022"]
+    let years = ["Spring 2020", "Fall 2020", "Spring 2021", "Fall 2021"]
 
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

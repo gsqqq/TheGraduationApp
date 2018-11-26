@@ -30,17 +30,17 @@ class TableViewControllerSchedule: UITableViewController {
         //melody please modify this part to generate the actual course schedule
         //title should be the semster
         //course data should be an array of String representing courses to be scheduled for each semester
-        if (yearChosen == "Spring 2021" ){
+        if (yearChosen == "Spring 2020" ){
         tableViewData = [semesterData(opened: false, title: "Spring 2019", courseData: (finalList[0])),
                          semesterData(opened: false, title: "Fall 2019", courseData: finalList[1]),
                          semesterData(opened: false, title: "Spring 2020", courseData: finalList[2]),]
-        } else if (yearChosen == "Fall 2021" ) {
+        } else if (yearChosen == "Fall 2020" ) {
             tableViewData = [semesterData(opened: false, title: "Spring 2019", courseData: (finalList[0])),
                              semesterData(opened: false, title: "Fall 2019", courseData: finalList[1]),
                              semesterData(opened: false, title: "Spring 2020", courseData: finalList[2]),
                              semesterData(opened: false, title: "Fall 2020", courseData: finalList[3]),
             ]
-        } else if (yearChosen == "Spring 2022" ) {
+        } else if (yearChosen == "Spring 2021" ) {
             tableViewData = [semesterData(opened: false, title: "Spring 2019", courseData: (finalList[0])),
                              semesterData(opened: false, title: "Fall 2019", courseData: finalList[1]),
                              semesterData(opened: false, title: "Spring 2020", courseData: finalList[2]),
