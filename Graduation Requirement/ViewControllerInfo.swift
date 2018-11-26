@@ -403,6 +403,7 @@ class ViewControllerInfo: UIViewController {
             return l
         } else {
             var l:[[String]] = []
+            print(optimalCoursesBS)
             let courseNum = optimalCoursesBS.count
             if (terms * 5 >= courseNum) {
                 k = 0
