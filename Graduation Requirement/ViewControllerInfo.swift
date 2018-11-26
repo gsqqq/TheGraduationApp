@@ -100,6 +100,7 @@ class ViewControllerInfo: UIViewController {
     var courseList:[String] = []
     var scheduleList:[String] = []
     var takenList:[String] = []
+    var finalList:[[String]] = []
     var numPhed = 0
     
     // variables from the UI
@@ -341,7 +342,8 @@ class ViewControllerInfo: UIViewController {
                 finalString = finalString + optimalCoursesBS[i] + "\n"
             }
         }
-        print(getSchedule())
+        finalList = getSchedule()
+        print(finalList)
         return [finalString,finalString]
     }
     
