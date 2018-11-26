@@ -25,10 +25,12 @@ class TableViewControllerSchedule: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         scheduleData = ViewControllerInfo()
+        print(scheduleData)
+        print(scheduleData?.finalList)
         //melody please modify this part to generate the actual course schedule
         //title should be the semster
         //course data should be an array of String representing courses to be scheduled for each semester
-        tableViewData = [semesterData(opened: false, title: "Spring 2019", courseData: scheduleData!.finalList[0]),
+        tableViewData = [semesterData(opened: false, title: "Spring 2019", courseData: (scheduleData?.finalList[0])!),
                          semesterData(opened: false, title: "Fall 2019", courseData: ["Course 1", "Course 2", "Course 3"]),
                          semesterData(opened: false, title: "Spring 2020", courseData: ["Course 1", "Course 2", "Course 3"])]
     }

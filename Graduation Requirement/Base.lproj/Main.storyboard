@@ -188,6 +188,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyl-gG-QwE">
+                                <rect key="frame" x="95" y="318" width="184" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Generate Course Schedule"/>
+                                <connections>
+                                    <segue destination="M8T-Sv-1u1" kind="show" id="OUS-HB-HHQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="SDO-pS-nxc"/>
@@ -195,6 +203,7 @@
                     <connections>
                         <outlet property="label" destination="aQu-pd-JKJ" id="Xc8-gz-LDd"/>
                         <outlet property="label2" destination="wwR-A4-ixv" id="Ipx-7p-WMp"/>
+                        <segue destination="M8T-Sv-1u1" kind="show" id="tVk-PQ-0wy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szJ-qm-dla" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -461,7 +470,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bDn-vI-6CY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3679" y="390"/>
+            <point key="canvasLocation" x="3956" y="1434"/>
         </scene>
         <!--Table View Controller A&S-->
         <scene sceneID="x3p-Xa-2J0">
@@ -937,6 +946,7 @@
         <segue reference="9NM-Qc-BdT"/>
         <segue reference="tFb-ng-qI9"/>
         <segue reference="NX3-uF-0mX"/>
+        <segue reference="tVk-PQ-0wy"/>
         <segue reference="9Be-CP-qzn"/>
         <segue reference="O83-lr-S81"/>
         <segue reference="vZ7-3U-uxF"/>
