@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		186C289721ABB2AE007BC0CE /* TestBaSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C289621ABB2AE007BC0CE /* TestBaSchedule.swift */; };
+		186C289921ABB85B007BC0CE /* TestBsSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C289821ABB85B007BC0CE /* TestBsSchedule.swift */; };
 		1892374E218644AC000E2AD0 /* ViewControllerYearTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892374D218644AC000E2AD0 /* ViewControllerYearTest.swift */; };
 		18923750218655BA000E2AD0 /* ViewControllerTechTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892374F218655BA000E2AD0 /* ViewControllerTechTest.swift */; };
 		18923752218658DF000E2AD0 /* ViewControllerBreadthTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18923751218658DF000E2AD0 /* ViewControllerBreadthTest.swift */; };
@@ -64,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		186C289621ABB2AE007BC0CE /* TestBaSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBaSchedule.swift; sourceTree = "<group>"; };
+		186C289821ABB85B007BC0CE /* TestBsSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBsSchedule.swift; sourceTree = "<group>"; };
 		1892371E218636D6000E2AD0 /* Graduation RequirementTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Graduation RequirementTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1892372C218636E4000E2AD0 /* GraduationRequirementTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraduationRequirementTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1892373F218643A3000E2AD0 /* Graduation RequirementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Graduation RequirementUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +150,7 @@
 				18F5E5AA219A5C160003ABC0 /* TestBsDepth.swift */,
 				18F5E5B321A4786A0003ABC0 /* TestBsPhed.swift */,
 				186C289621ABB2AE007BC0CE /* TestBaSchedule.swift */,
+				186C289821ABB85B007BC0CE /* TestBsSchedule.swift */,
 			);
 			path = UITest;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				1892375821865DF0000E2AD0 /* ViewControllerDegreeTest.swift in Sources */,
 				18F5E5AB219A5C160003ABC0 /* TestBsDepth.swift in Sources */,
 				18F5E59F219A4B450003ABC0 /* TestBaInfo.swift in Sources */,
+				186C289921ABB85B007BC0CE /* TestBsSchedule.swift in Sources */,
 				186C289721ABB2AE007BC0CE /* TestBaSchedule.swift in Sources */,
 				18923750218655BA000E2AD0 /* ViewControllerTechTest.swift in Sources */,
 				1892374E218644AC000E2AD0 /* ViewControllerYearTest.swift in Sources */,

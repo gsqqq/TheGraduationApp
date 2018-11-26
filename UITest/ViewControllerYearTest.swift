@@ -29,7 +29,7 @@ class ViewControllerYearTest: XCTestCase {
        graduation year*/
     func testYear() {
         let app = XCUIApplication()
-        app.pickerWheels["Spring 2020"].swipeUp()
+        app.pickerWheels["Spring 2020"].tap()
         app.buttons["Confirm"].tap()
         
     }
@@ -38,11 +38,16 @@ class ViewControllerYearTest: XCTestCase {
      graduation year*/
     func testYearTwo() {
         let app = XCUIApplication()
-        app.pickerWheels["Spring 2020"].swipeDown()
+        app.pickerWheels["Spring 2020"].swipeUp()
         app.buttons["Confirm"].tap()
     }
     
-  
+    func testYearThree() {
+        let app = XCUIApplication()
+        app.pickerWheels["Spring 2020"].swipeUp()
+        app.pickerWheels["Fall 2021"].swipeUp()
+        app.buttons["Confirm"].tap()
+    }
     
     
 

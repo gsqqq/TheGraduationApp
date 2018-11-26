@@ -244,13 +244,13 @@ class ViewControllerInfo: UIViewController {
         }
         return 2 - Double((engrPhed?.getHowMany())!)!
     }
-    
+    /*
     func getEngrPhedTaken() -> Double {
         if (engrPhed?.getHowMany()) == ">=2" {
             return 2;
         }
         return Double((engrPhed?.getHowMany())!)!
-    }
+    }*/
     
     /*
      * Calculate the PHED credits remaining
@@ -263,13 +263,13 @@ class ViewControllerInfo: UIViewController {
         }
         return 2 - Double((asPhed?.getHowMany())!)!
     }
-    
+    /*
     func getAsPhedTaken() -> Double {
         if (asPhed?.getHowMany()) == ">=2" {
             return 2;
         }
         return Double((asPhed?.getHowMany())!)!
-    }
+    }*/
     
     func getTakenList() -> [String] {
         

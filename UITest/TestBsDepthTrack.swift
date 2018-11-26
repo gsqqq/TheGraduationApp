@@ -77,5 +77,7 @@ class TestBsDepthTrack: XCTestCase {
         app.scrollViews.otherElements/*@START_MENU_TOKEN@*/.pickerWheels["Software Engineering"].press(forDuration: 1.2);/*[[".pickers.pickerWheels[\"Software Engineering\"]",".tap()",".press(forDuration: 1.2);",".pickerWheels[\"Software Engineering\"]"],[[[-1,3,1],[-1,0,1]],[[-1,2],[-1,1]]],[0,0]]@END_MENU_TOKEN@*/
        
     }
+    
+    
 
 }

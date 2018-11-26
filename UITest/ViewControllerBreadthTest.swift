@@ -44,5 +44,25 @@ class ViewControllerBreadthTest: XCTestCase {
         confirmButton.tap()
         
     }
+    
+    func testBreadthTwo() {
+        
+        let app = XCUIApplication()
+        app.pickerWheels["Spring 2020"].press(forDuration: 0.5);
+        
+        let confirmButton = app.buttons["Confirm"]
+        confirmButton.tap()
+        app.buttons["Select"].tap()
+        
+        let tablesQuery = app.tables
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["EECS 132"]/*[[".cells.staticTexts[\"EECS 132\"]",".staticTexts[\"EECS 132\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["EECS 233"]/*[[".cells.staticTexts[\"EECS 233\"]",".staticTexts[\"EECS 233\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["EECS 281"]/*[[".cells.staticTexts[\"EECS 281\"]",".staticTexts[\"EECS 281\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery.buttons["Done"].tap()
+        app.pickerWheels["0"].swipeUp()
+        app.pickerWheels[">=5"].swipeUp()
+        confirmButton.tap()
+        
+    }
 
 }
