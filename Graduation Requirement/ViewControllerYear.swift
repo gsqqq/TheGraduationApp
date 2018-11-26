@@ -11,7 +11,7 @@
 import UIKit
 
 // storing the user input
-var yearChosen: String! = "2020"
+var yearChosen: String! = "Spring 2021"
 
 class ViewControllerYear: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     

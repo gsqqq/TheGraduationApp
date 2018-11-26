@@ -34,10 +34,73 @@ class ViewControllerInfo: UIViewController {
      *   The remaining in the list is whatever needs to be scheduled
      */
     var coreRemaining:[String] = ["EECS 132", "EECS 233", "EECS 281", "EECS 302", "EECS 340", "EECS 395"]
-    var engrCoreRemaining:[String] = ["MATH 121", "MATH 122 or MATH 124", "MATH 223 or MATH 227", "MATH 201 or MATH 307", "CHEM 111", "ENGR 145", "PHYS 121 or PHYS 123", "PHYS 122 or PHYS 124", "ENGR 398", "ENGL 398"]
-    var asCoreRemaining:[String] = ["MATH 125", "MATH 126", "ENGL 398", "ENGR 398","Arts & Humanities I", "Arts & Humanities II", "Natural Sciences I", "Natural Sciences II", "Social Sciences I", "Social Sciences II", "Quantitative Reasoning", "Global & Cultural Diversity", "SAGES First Year Seminar", "Sages University Seminar I", "Sages University Seminar II"]
+    var engrCoreRemaining:[String] = ["MATH 121", "MATH 122 or MATH 124", "MATH 223 or MATH 227", "MATH 201 or MATH 307", "CHEM 111", "ENGR 145", "PHYS 121 or PHYS 123", "PHYS 122 or PHYS 124", "ENGR 398", "ENGL 398", "First Year Seminar", "University Seminar I", "University Seminar II", "Arts & Humanity or Social Science I", "Arts & Humanity or Social Science II", "Arts & Humanity or Social Science III", "Arts & Humanity or Social Science IV" ]
+    var asCoreRemaining:[String] = ["MATH 125", "MATH 126", "Department Capstone","Arts & Humanities I", "Arts & Humanities II", "Natural Sciences I", "Natural Sciences II", "Social Sciences I", "Social Sciences II", "Quantitative Reasoning", "Global & Cultural Diversity", "First Year Seminar", "University Seminar I", "University Seminar II"]
+    var optimalCoursesBS:[String] = ["MATH 121",
+                                    "EECS 132","CHEM 111",
+        "PHYS 121 or PHYS 123",
+        "First Year Seminar",
+        "Arts & Humanity or Social Science I",
+        "Arts & Humanity or Social Science II",
+        "MATH 122 or MATH 124",
+        "EECS 233",
+        "ENGR 145",
+        "EECS 281",
+        "PHYS 122 or PHYS 124",
+        "Arts & Humanity or Social Science III",
+        "Arts & Humanity or Social Science IV",
+        "University Seminar I",
+        "EECS 302",
+        "Breadth Elective",
+        "Breadth Elective",
+        "MATH 223 or MATH 227",
+        "ENGR 398",
+        "ENGL 398",
+        "Technical Elective",
+        "Technical Elective",
+        "Depth Requirement",
+        "Depth Requirement",
+        "Breadth Elective",
+        "University Seminar II",
+        "Statistics",
+        "EECS 340",
+        "MATH 201 or MATH 307",
+        "Breadth Elective",
+        "Breadth Elective", "Technical Elective", "Technical Elective","Technical Elective","Depth Requirement","Depth Requirement","EECS 395"]
+    
+    var optimalCoursesBA : [String] = ["MATH 125",
+                                       "EECS 132",
+                                       "First Year Seminar",
+                                       "Arts & Humanities I",
+        "Arts & Humanities II",
+        "Natural Sciences I",
+        "Natural Sciences II",
+        "Arts & Humanities I",
+        "Social Sciences I", "Social Sciences II",
+        "MATH 126",
+        "EECS 233",
+        "EECS 281",
+        "Quantitative Reasoning", "Global & Cultural Diversity",
+        "University Seminar I",
+        "EECS 302",
+        "Breadth Elective",
+        "Breadth Elective",
+        "Technical Elective",
+        "Technical Elective",
+        "University Seminar II",
+        "Statistics",
+        "EECS 340",
+        "Breadth Elective",
+        "Technical Elective",
+        "Technical Elective",
+        "EECS 395",
+        "Department Capstone"
+]
+    
     var courseList:[String] = []
     var scheduleList:[String] = []
+    var takenList:[String] = []
+    var numPhed = 0
     
     // variables from the UI
     @IBOutlet weak var label2: UILabel!
@@ -92,6 +155,21 @@ class ViewControllerInfo: UIViewController {
         }
     }
     
+    func getBreadthTaken() -> Int {
+        if (degree?.getDegree() == "Bachelor of Arts") {
+            if (breadth?.getHowMany()) == ">=5" {
+                return 3;
+            }
+            return Int((breadth?.getHowMany())!)!
+        }
+        else {
+            if (breadth?.getHowMany()) == ">=5" {
+                return 5;
+            }
+            return Int((breadth?.getHowMany())!)!
+        }
+    }
+    
     /*
      * Get technical course remaining regarding to the degree
      *   that the user chose
@@ -108,6 +186,21 @@ class ViewControllerInfo: UIViewController {
         }
     }
     
+    func getTechTaken() -> Int {
+        if (degree?.getDegree() == "Bachelor of Arts") {
+            if (tech?.getHowMany()) == ">=5" {
+                return 3;
+            }
+            return Int((tech?.getHowMany())!)!
+        }
+        else {
+            if (tech?.getHowMany()) == ">=5" {
+                return 5;
+            }
+            return Int((tech?.getHowMany())!)!
+        }
+    }
+    
     /*
      * Get depth course remaining regarding to the degree
      *   that the user chose (bs only)
@@ -119,6 +212,15 @@ class ViewControllerInfo: UIViewController {
             return 4 - Int((depth?.getHowMany())!)!
         }
     }
+    
+    func getDepthTaken () -> Int {
+        if (depth?.getHowMany()) == ">=4" {
+            return 4;
+        } else {
+            return Int((depth?.getHowMany())!)!
+        }
+    }
+
     
     /*
      * If the BS student completed statistics
@@ -143,6 +245,13 @@ class ViewControllerInfo: UIViewController {
         return 2 - Double((engrPhed?.getHowMany())!)!
     }
     
+    func getEngrPhedTaken() -> Double {
+        if (engrPhed?.getHowMany()) == ">=2" {
+            return 2;
+        }
+        return Double((engrPhed?.getHowMany())!)!
+    }
+    
     /*
      * Calculate the PHED credits remaining
      *  Seperate for BA because they are from
@@ -155,79 +264,84 @@ class ViewControllerInfo: UIViewController {
         return 2 - Double((asPhed?.getHowMany())!)!
     }
     
+    func getAsPhedTaken() -> Double {
+        if (asPhed?.getHowMany()) == ">=2" {
+            return 2;
+        }
+        return Double((asPhed?.getHowMany())!)!
+    }
+    
+    func getTakenList() -> [String] {
+        
+        for i in 0..<core!.getCore().count {
+            takenList.append(core!.getCore()[i])
+        }
+        
+        if (degree?.getDegree() == "Bachelor of Arts") { //BA
+            //Append BA core remaining
+            for i in 0..<asCore!.getAsCore().count {
+                takenList.append(asCore!.getAsCore()[i])
+            }
+            for i in 0..<getBreadthTaken() {
+                takenList.append("Breadth Elective")// + String(i+1))
+            }
+            for i in 0..<getTechTaken() {
+                takenList.append("Technical Elective")// + String(i+1))
+            }
+            
+            
+        } else {  //BS
+            // Append BS core remaining
+            for i in 0..<engrCore!.getEngrCore().count {
+                takenList.append(engrCore!.getEngrCore()[i])
+            }
+            if getStats()==0 {
+                courseList.append("Statistics")
+            }
+            for _ in 0..<getDepthTaken() {
+                takenList.append("Depth Requirement")// + String(i+1))
+            }
+            for _ in 0..<getBreadthTaken() {
+                takenList.append("Breadth Elective")// + String(i+1))
+            }
+            for i in 0..<getTechTaken() {
+                takenList.append("Technical Elective")// + String(i+1))
+            }
+        }
+        return takenList
+    }
+    
     /*
      * Temperarily a helper function
      *  print out all course remaining
      *  calculate course schedule
      */
     func getInfo() -> [String] {
-        let yearString = year?.getYear()
-        let techString = tech?.getHowMany()
-        let degreeString = degree?.getDegree()
-        let coreList = core?.getCore()
-        let breadthString = breadth?.getHowMany()
-        let engrCoreList = engrCore?.getEngrCore()
-        var coreListString: String = ""
-        var engrCoreListString: String = ""
-        var asCoreListString: String = ""
-        for i in 0..<coreRemaining.count {
-            courseList.append(coreRemaining[i])
-            coreListString = coreListString + coreRemaining[i] + "\n"
-        }
-        
         var finalString: String
         var finalString2: String
         finalString = ""
         finalString2 = ""
-        if (degree?.getDegree() == "Bachelor of Arts") { //BA
-            //Append BS core remaining
-            for i in 0..<asCoreRemaining.count {
-                courseList.append(asCoreRemaining[i])
-                asCoreListString = asCoreListString + asCoreRemaining[i] + "\n"
+        var taken = getTakenList()
+        if (degree?.getDegree() == "Bachelor of Arts") {
+            for i in 0..<taken.count {
+                //print(taken[i])
+                let indexToRemove = optimalCoursesBA.firstIndex(of: taken[i])
+                optimalCoursesBA.remove(at: indexToRemove!)
             }
-            if getAsPhed() > 0 {
-                let num = Int(getAsPhed() / 0.5)
-                //Append PHED courses
-                for _ in 0..<num {
-                    courseList.append("PHED 0.5")
-                }
+            for i in 0..<optimalCoursesBA.count {
+                finalString = finalString + optimalCoursesBA[i] + "\n"
             }
-        } else {  //BS
-            // Append BS core remaining
-            for i in 0..<engrCoreRemaining.count {
-                courseList.append(engrCoreRemaining[i])
-                engrCoreListString = engrCoreListString + engrCoreRemaining[i] + "\n"
+        } else {
+            for i in 0..<taken.count {
+                //print(taken[i])
+                optimalCoursesBS.remove(at: optimalCoursesBS
+                    .firstIndex(of: taken[i])!)
             }
-            if getStats()==1 {
-                courseList.append("Statistics")
-            }
-            if getEngrPhed() > 0 {
-                let num = Int(getEngrPhed() / 0.5)
-                for _ in 0..<num {
-                    courseList.append("PHED 0.5")
-                }
-            }
-            // Append Depth remaining
-            for i in 0..<getDepthRemain() {
-                courseList.append("Depth Requirement" + String(i+1))
+            for i in 0..<optimalCoursesBS.count {
+                finalString = finalString + optimalCoursesBS[i] + "\n"
             }
         }
-        // Append tech and breadth remaining
-        for i in 0..<getTechRemain() {
-            courseList.append("Technical Elective" + String(i+1))
-        }
-        for i in 0..<getBreadthRemain() {
-            courseList.append("Breadth Elective" + String(i+1))
-        }
-        let schedule:[[String]]
-        schedule = getSchedule()
-        // print out all courses
-        for i in 0..<schedule.count {
-            for j in 0..<schedule[i].count {
-                finalString = finalString + schedule[i][j] + "\n"
-            }
-            finalString = finalString + "\n"
-        }
+        print(getSchedule())
         return [finalString,finalString]
     }
     
@@ -243,18 +357,76 @@ class ViewControllerInfo: UIViewController {
      * append courses into Schedule of 5 in a line
      */
     func getSchedule() -> [[String]] {
-        var l:[[String]] = [[]]
-        // adding all courses 5 by 5
-        for i in 0..<scheduleList.count/5 + 1 {
-            var j:[String] = []
-            for k in 0..<5 {
-                if (i*5+k < scheduleList.count){
-                    j.append(scheduleList[i*5+k])
-                }
-            }
-            l.append(j)
+        let graduationTerm = year?.getYear()
+        var terms = 0
+        var k = 0
+        if (graduationTerm == "Spring 2021") {
+            terms = 3
         }
-        return l
+        if (graduationTerm == "Fall 2021") {
+            terms = 4
+        }
+        if (graduationTerm == "Spring 2022") {
+            terms = 5
+        }
+        if (graduationTerm == "Fall 2022") {
+            terms = 6
+        }
+        if (degree?.getDegree() == "Bachelor of Arts") {
+            var l:[[String]] = []
+            let courseNum = optimalCoursesBA.count
+            if (terms * 5 >= courseNum) {
+                k = 0
+            } else {
+                k = courseNum % (terms * 5)
+            }
+            var index = 0
+            // adding all courses 5 by 5
+            for i in 0..<terms {
+                var j:[String] = []
+                var overload = 0
+                if (k > 0) {
+                    overload = k/(terms-i) + 1
+                    k = k - overload
+                }
+                for _ in 0..<5 + overload {
+                    if (index < courseNum){
+                        j.append(optimalCoursesBA[index])
+                        index = index + 1
+                    }
+                    overload = 0
+                }
+                l.append(j)
+            }
+            return l
+        } else {
+            var l:[[String]] = []
+            let courseNum = optimalCoursesBS.count
+            if (terms * 5 >= courseNum) {
+                k = 0
+            } else {
+                k = courseNum % (terms * 5)
+            }
+            var index = 0
+            // adding all courses 5 by 5
+            for i in 0..<terms {
+                var j:[String] = []
+                var overload = 0
+                if (k > 0) {
+                    overload = k/(terms-i) + 1
+                    k = k - overload
+                }
+                for _ in 0..<5 + overload {
+                    if (index < courseNum){
+                        j.append(optimalCoursesBS[index])
+                        index = index + 1
+                    }
+                    overload = 0
+                }
+                l.append(j)
+            }
+            return l
+        }
     }
     
     override func viewDidLoad() {
@@ -274,7 +446,7 @@ class ViewControllerInfo: UIViewController {
         coreRemaining = getCoreRemain()
         engrCoreRemaining = getEngrCoreRemain()
         asCoreRemaining = getAsCoreRemain()
-        label.text = self.getInfo()[0]
+        //label.text = self.getInfo()[0]
         scheduleList = getCourseList()
         label2.text = self.getInfo()[1]
         // Do any additional setup after loading the view, typically from a nib.
