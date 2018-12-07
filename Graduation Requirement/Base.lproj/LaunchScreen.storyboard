@@ -35,6 +35,9 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="cwru-stacked-logo (1).png" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yuk-e2-4sB">
+                                <rect key="frame" x="0.0" y="269" width="375" height="150"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dIB-A0-PiT">
                                 <rect key="frame" x="0.0" y="625.5" width="375" height="11.5"/>
                                 <subviews>
@@ -55,7 +58,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dIB-A0-PiT" secondAttribute="bottom" constant="30" id="AyD-rf-LRH"/>
                             <constraint firstItem="dIB-A0-PiT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fel-r5-d2g"/>
                             <constraint firstItem="ub0-My-ePD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Heh-pb-sbR"/>
+                            <constraint firstItem="yuk-e2-4sB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Qxz-g5-stS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ub0-My-ePD" secondAttribute="trailing" id="fj1-F1-llE"/>
+                            <constraint firstItem="yuk-e2-4sB" firstAttribute="top" secondItem="ub0-My-ePD" secondAttribute="bottom" constant="33" id="m7s-aG-UHY"/>
+                            <constraint firstItem="yuk-e2-4sB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qOR-4e-0nc"/>
                             <constraint firstItem="ub0-My-ePD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="quT-kY-54Z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -66,4 +72,7 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cwru-stacked-logo (1).png" width="201" height="150"/>
+    </resources>
 </document>
