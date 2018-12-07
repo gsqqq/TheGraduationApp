@@ -18,26 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ub0-My-ePD">
-                                <rect key="frame" x="0.0" y="170" width="375" height="66"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="C4T-y5-bER">
+                                <rect key="frame" x="0.0" y="222" width="375" height="165"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Graduation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2j-GG-z51">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="29"/>
-                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Bold" family="Bodoni 72 Oldstyle" pointSize="24"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Requirement App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T15-8F-BUQ">
-                                        <rect key="frame" x="0.0" y="37" width="375" height="29"/>
-                                        <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Bold" family="Bodoni 72 Oldstyle" pointSize="24"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="cwru-stacked-logo (1).png" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yuk-e2-4sB">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   register beyond the possible" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2j-GG-z51">
+                                        <rect key="frame" x="0.0" y="150" width="375" height="15"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="cwru-stacked-logo (1).png" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yuk-e2-4sB">
-                                <rect key="frame" x="0.0" y="269" width="375" height="150"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dIB-A0-PiT">
                                 <rect key="frame" x="0.0" y="625.5" width="375" height="11.5"/>
                                 <subviews>
@@ -54,15 +48,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.00012520876771304756" green="0.18578046560287476" blue="0.30624568462371826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dIB-A0-PiT" secondAttribute="trailing" id="9qb-0v-hsB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dIB-A0-PiT" secondAttribute="bottom" constant="30" id="AyD-rf-LRH"/>
-                            <constraint firstItem="dIB-A0-PiT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fel-r5-d2g"/>
-                            <constraint firstItem="ub0-My-ePD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Heh-pb-sbR"/>
-                            <constraint firstItem="yuk-e2-4sB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Qxz-g5-stS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ub0-My-ePD" secondAttribute="trailing" id="fj1-F1-llE"/>
-                            <constraint firstItem="yuk-e2-4sB" firstAttribute="top" secondItem="ub0-My-ePD" secondAttribute="bottom" constant="33" id="m7s-aG-UHY"/>
-                            <constraint firstItem="yuk-e2-4sB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qOR-4e-0nc"/>
-                            <constraint firstItem="ub0-My-ePD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="quT-kY-54Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dIB-A0-PiT" secondAttribute="bottom" constant="30" id="5Dh-cm-66a"/>
+                            <constraint firstItem="dIB-A0-PiT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ho5-SC-4lc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C4T-y5-bER" secondAttribute="trailing" id="L3q-LR-kjM"/>
+                            <constraint firstItem="C4T-y5-bER" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ngy-82-sLk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dIB-A0-PiT" secondAttribute="trailing" id="Nwq-QO-GDg"/>
+                            <constraint firstItem="C4T-y5-bER" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="202" id="nCf-6g-Z2A"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
