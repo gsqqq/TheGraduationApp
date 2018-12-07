@@ -85,7 +85,7 @@
 		18F5E5AA219A5C160003ABC0 /* TestBsDepth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBsDepth.swift; sourceTree = "<group>"; };
 		18F5E5B321A4786A0003ABC0 /* TestBsPhed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBsPhed.swift; sourceTree = "<group>"; };
 		CE2A18912185573F007E449A /* ViewControllerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInfo.swift; sourceTree = "<group>"; };
-		F005E38221AB4D5D0051AA10 /* TableViewControllerSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewControllerSchedule.swift; path = "Graduation Requirement/TableViewControllerSchedule.swift"; sourceTree = "<group>"; };
+		F005E38221AB4D5D0051AA10 /* TableViewControllerSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerSchedule.swift; sourceTree = "<group>"; };
 		F04705AC21BA0F3B001568EA /* TheGraduationApp */ = {isa = PBXFileReference; lastKnownFileType = folder; name = TheGraduationApp; sourceTree = SOURCE_ROOT; };
 		F04705AE21BA0F79001568EA /* cwru-stacked-logo (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cwru-stacked-logo (1).png"; path = "../../../../../../Downloads/cwru-stacked-logo (1).png"; sourceTree = "<group>"; };
 		F04705B021BA13F6001568EA /* Cselogo124.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Cselogo124.png; path = ../../../../../../Downloads/Cselogo124.png; sourceTree = "<group>"; };
@@ -164,7 +164,6 @@
 		F08E7BEB215D9F8F00F2CD8F = {
 			isa = PBXGroup;
 			children = (
-				F005E38221AB4D5D0051AA10 /* TableViewControllerSchedule.swift */,
 				1892374B21864445000E2AD0 /* UITest */,
 				F08E7BF6215D9F8F00F2CD8F /* Graduation Requirement */,
 				F08E7BF5215D9F8F00F2CD8F /* Products */,
@@ -185,6 +184,7 @@
 		F08E7BF6215D9F8F00F2CD8F /* Graduation Requirement */ = {
 			isa = PBXGroup;
 			children = (
+				F005E38221AB4D5D0051AA10 /* TableViewControllerSchedule.swift */,
 				F0878A8C2196E138003CFF73 /* ViewControllerDepth.swift */,
 				F0878A8A2196D6B6003CFF73 /* ViewControllerStat.swift */,
 				F071CE122196BEDE00ED4700 /* TableViewControllerA_S.swift */,
@@ -202,8 +202,8 @@
 				F08E7C00215D9F8F00F2CD8F /* LaunchScreen.storyboard */,
 				F04705B021BA13F6001568EA /* Cselogo124.png */,
 				F04705AE21BA0F79001568EA /* cwru-stacked-logo (1).png */,
-				F04705AC21BA0F3B001568EA /* TheGraduationApp */,
 				CE2A18912185573F007E449A /* ViewControllerInfo.swift */,
+				F04705AC21BA0F3B001568EA /* TheGraduationApp */,
 				F08E7C03215D9F8F00F2CD8F /* Info.plist */,
 			);
 			path = "Graduation Requirement";

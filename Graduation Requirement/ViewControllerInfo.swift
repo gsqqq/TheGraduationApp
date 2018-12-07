@@ -104,57 +104,11 @@ class ViewControllerInfo: UIViewController {
     // variables from the UI
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var label: UILabel!
-
-    /*
-     * Get CS core course remaining by removing user selected
-     *   courses from coreRemaining
-     *//*
-    func getCoreRemain() -> [String] {
-        for i in 0..<core!.getCore().count {
-            coreRemaining.remove(at: coreRemaining.firstIndex(of: core!.getCore()[i])!)
-        }
-        return coreRemaining
-    }*/
     
     /*
-     * Get Engineering core course remaining by removing user selected
-     *   courses from engrCoreRemaining
-     */
-    /*func getEngrCoreRemain() -> [String] {
-        for i in 0..<engrCore!.getEngrCore().count {
-            engrCoreRemaining.remove(at: engrCoreRemaining.firstIndex(of: engrCore!.getEngrCore()[i])!)
-        }
-        return engrCoreRemaining
-    }*/
-    
-    /*
-     * Get Arts and science core course remaining by removing user selected
-     *   courses from asCoreRemaining
-     */
-    /*
-    func getAsCoreRemain() -> [String] {
-        for i in 0..<asCore!.getAsCore().count {
-            asCoreRemaining.remove(at: asCoreRemaining.firstIndex(of: asCore!.getAsCore()[i])!)
-        }
-        return asCoreRemaining
-    }*/
-    
-    /*
-     * Get breadth course remaining regarding to the degree
+     * Get breadth course taken regarding to the degree
      *   that the user chose
- 
-    func getBreadthRemain() -> Int {
-        if (breadth?.getHowMany()) == ">=5" {
-            return 0;
-        }
-        if (degree?.getDegree() == "Bachelor of Arts") {
-            return 3 - Int((breadth?.getHowMany())!)!
-        }
-        else {
-            return 5 - Int((breadth?.getHowMany())!)!
-        }
-    }*/
-    
+     */
     func getBreadthTaken() -> Int {
         if (degree?.getDegree() == "Bachelor of Arts") {
             if (breadth?.getHowMany()) == ">=5" || (breadth?.getHowMany()) == "4" || (breadth?.getHowMany()) == "3" {
@@ -170,22 +124,7 @@ class ViewControllerInfo: UIViewController {
         }
     }
     
-    /*
-     * Get technical course remaining regarding to the degree
-     *   that the user chose
- 
-    func getTechRemain() -> Int {
-        if (tech?.getHowMany()) == ">=5" {
-            return 0;
-        }
-        if (degree?.getDegree() == "Bachelor of Arts") {
-            return 4 - Int((tech?.getHowMany())!)!
-        }
-        else {
-            return 5 - Int((tech?.getHowMany())!)!
-        }
-    }*/
-    
+    /* get all technical elective taken by user input */
     func getTechTaken() -> Int {
         if (degree?.getDegree() == "Bachelor of Arts") {
             if (tech?.getHowMany()) == ">=5" || (tech?.getHowMany()) == "4" {
@@ -201,18 +140,7 @@ class ViewControllerInfo: UIViewController {
         }
     }
     
-    /*
-     * Get depth course remaining regarding to the degree
-     *   that the user chose (bs only)
- 
-    func getDepthRemain() -> Int {
-        if (depth?.getHowMany()) == ">=4" {
-            return 0;
-        } else {
-            return 4 - Int((depth?.getHowMany())!)!
-        }
-    }*/
-    
+    /** get all depth requirement taken by user input */
     func getDepthTaken () -> Int {
         if (depth?.getHowMany()) == ">=4" {
             return 4;
@@ -244,13 +172,6 @@ class ViewControllerInfo: UIViewController {
         }
         return 2 - Double((engrPhed?.getHowMany())!)!
     }
-    /*
-    func getEngrPhedTaken() -> Double {
-        if (engrPhed?.getHowMany()) == ">=2" {
-            return 2;
-        }
-        return Double((engrPhed?.getHowMany())!)!
-    }*/
     
     /*
      * Calculate the PHED credits remaining
@@ -263,14 +184,8 @@ class ViewControllerInfo: UIViewController {
         }
         return 2 - Double((asPhed?.getHowMany())!)!
     }
-    /*
-    func getAsPhedTaken() -> Double {
-        if (asPhed?.getHowMany()) == ">=2" {
-            return 2;
-        }
-        return Double((asPhed?.getHowMany())!)!
-    }*/
     
+    /* append all taken list */
     func getTakenList() -> [String] {
         
         for i in 0..<core!.getCore().count {
@@ -490,8 +405,6 @@ class ViewControllerInfo: UIViewController {
         engrPhed = ViewControllerENGR()
         asCore = TableViewControllerA_S()
         asPhed = ViewControllerA_S()
-       // coreRemaining = getCoreRemain()
-        //engrCoreRemaining = getEngrCoreRemain()
         label.text = ""
         scheduleList = getCourseList()
         label2.text = self.getInfo()[1]
