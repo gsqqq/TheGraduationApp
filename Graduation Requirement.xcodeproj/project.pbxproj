@@ -22,8 +22,7 @@
 		18F5E5B421A4786A0003ABC0 /* TestBsPhed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5E5B321A4786A0003ABC0 /* TestBsPhed.swift */; };
 		CE2A18922185573F007E449A /* ViewControllerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A18912185573F007E449A /* ViewControllerInfo.swift */; };
 		F005E38321AB4D5D0051AA10 /* TableViewControllerSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F005E38221AB4D5D0051AA10 /* TableViewControllerSchedule.swift */; };
-		F04705AF21BA0F79001568EA /* cwru-stacked-logo (1).png in Resources */ = {isa = PBXBuildFile; fileRef = F04705AE21BA0F79001568EA /* cwru-stacked-logo (1).png */; };
-		F04705B121BA13F7001568EA /* Cselogo124.png in Resources */ = {isa = PBXBuildFile; fileRef = F04705B021BA13F6001568EA /* Cselogo124.png */; };
+		F04705B521BA20EC001568EA /* cwru-stacked-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F04705B421BA20EC001568EA /* cwru-stacked-logo.png */; };
 		F071CE112196B6E400ED4700 /* ViewControllerA&S.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071CE102196B6E400ED4700 /* ViewControllerA&S.swift */; };
 		F071CE132196BEDE00ED4700 /* TableViewControllerA_S.swift in Sources */ = {isa = PBXBuildFile; fileRef = F071CE122196BEDE00ED4700 /* TableViewControllerA_S.swift */; };
 		F0878A872196D0F8003CFF73 /* TableViewControllerENGR.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0878A862196D0F8003CFF73 /* TableViewControllerENGR.swift */; };
@@ -85,8 +84,7 @@
 		18F5E5B321A4786A0003ABC0 /* TestBsPhed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBsPhed.swift; sourceTree = "<group>"; };
 		CE2A18912185573F007E449A /* ViewControllerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInfo.swift; sourceTree = "<group>"; };
 		F005E38221AB4D5D0051AA10 /* TableViewControllerSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerSchedule.swift; sourceTree = "<group>"; };
-		F04705AE21BA0F79001568EA /* cwru-stacked-logo (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cwru-stacked-logo (1).png"; path = "../../../../../../Downloads/cwru-stacked-logo (1).png"; sourceTree = "<group>"; };
-		F04705B021BA13F6001568EA /* Cselogo124.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Cselogo124.png; path = ../../../../../../Downloads/Cselogo124.png; sourceTree = "<group>"; };
+		F04705B421BA20EC001568EA /* cwru-stacked-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cwru-stacked-logo.png"; sourceTree = "<group>"; };
 		F071CE102196B6E400ED4700 /* ViewControllerA&S.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllerA&S.swift"; sourceTree = "<group>"; };
 		F071CE122196BEDE00ED4700 /* TableViewControllerA_S.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerA_S.swift; sourceTree = "<group>"; };
 		F0878A862196D0F8003CFF73 /* TableViewControllerENGR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerENGR.swift; sourceTree = "<group>"; };
@@ -198,8 +196,7 @@
 				F0E5DE0621841A1000DD2451 /* ViewControllerDegree.swift */,
 				F08E7BFE215D9F8F00F2CD8F /* Assets.xcassets */,
 				F08E7C00215D9F8F00F2CD8F /* LaunchScreen.storyboard */,
-				F04705B021BA13F6001568EA /* Cselogo124.png */,
-				F04705AE21BA0F79001568EA /* cwru-stacked-logo (1).png */,
+				F04705B421BA20EC001568EA /* cwru-stacked-logo.png */,
 				CE2A18912185573F007E449A /* ViewControllerInfo.swift */,
 				F08E7C03215D9F8F00F2CD8F /* Info.plist */,
 			);
@@ -360,10 +357,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F08E7C02215D9F8F00F2CD8F /* LaunchScreen.storyboard in Resources */,
-				F04705B121BA13F7001568EA /* Cselogo124.png in Resources */,
 				F08E7BFF215D9F8F00F2CD8F /* Assets.xcassets in Resources */,
-				F04705AF21BA0F79001568EA /* cwru-stacked-logo (1).png in Resources */,
 				F08E7BFD215D9F8F00F2CD8F /* Main.storyboard in Resources */,
+				F04705B521BA20EC001568EA /* cwru-stacked-logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
